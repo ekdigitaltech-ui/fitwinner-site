@@ -16,13 +16,13 @@
 <meta property="og:description" content="Kalori hedefin, makroların ve form skorun cihazında hesaplanır. Yakında App Store'da.">
 <meta property="og:image" content="https://fitwinner.app/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="assets/css/site.css?v=20261008b">
+<link rel="stylesheet" href="assets/css/site.css?v=20261008d">
 <script>document.documentElement.classList.add('js')</script>
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/js/i18n.js?v=20261008b" defer></script>
-<script src="assets/js/site.js?v=20261008b" defer></script>
+<script src="assets/js/i18n.js?v=20261008d" defer></script>
+<script src="assets/js/site.js?v=20261008d" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
@@ -322,6 +322,182 @@
         </article>
 
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP: onboarding steps, scroll-drawn track -->
+<section class="setup" id="setup" aria-labelledby="setup-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="eyebrow" data-i18n="su.eyebrow">Hızlı kurulum</p>
+      <h2 id="setup-title" data-i18n="su.title">Sekiz kısa adım. Hesap yok.</h2>
+      <p class="sec-lede" data-i18n="su.lede">Kurulumda verdiğin bilgiler hedefinin her satırına girer. Sonunda hedefinin nasıl hesaplandığını özet ekranında görürsün.</p>
+    </header>
+    <ol class="track">
+      <li><i class="tk-dot"></i><b data-i18n="su.1t">Temel bilgiler</b><span data-i18n="su.1p">Doğum yılı ve biyolojik cinsiyet. Uygulama 18 yaş ve üzeri içindir.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.2t">Gizlilik ve rıza</b><span data-i18n="su.2p">Şartları kabul et; sağlık verisi ve yapay zekâ için ayrı, isteğe bağlı rızalar. Hepsini sonradan Profil'den değiştirirsin.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.3t">Vücut</b><span data-i18n="su.3p">Boy ve kilo; kg/cm ya da lb/ft-in.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.4t">Hedef</b><span data-i18n="su.4p">Yağ kaybı, kilo koruma, kas kazanımı, performans ya da genel sağlık. Kilo kaybı temposu haftada en fazla %1.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.5t">Meslek</b><span data-i18n="su.5p">Çalışma günün ve saatin. Masa başı, sahada ya da inşaatta; işin günlük enerjine eklenir.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.6t">Antrenman</b><span data-i18n="su.6p">Sporların, haftalık seans sayın ve süren. Haftalık planın buradan kurulur.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.7t">Beslenme ve sağlık</b><span data-i18n="su.7p">Kaçındığın besinler ve isteğe bağlı sağlık taraması.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.8t">Özet</b><span data-i18n="su.8p">Günlük hedefin ve hesabın satır satır dökümü.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- AI COMMENTARY -->
+<section class="ai" id="ai" aria-labelledby="ai-title">
+  <div class="ai-glow" aria-hidden="true"></div>
+  <div class="wrap ai-inner">
+    <div class="ai-copy" data-reveal>
+      <p class="eyebrow" data-i18n="ai.eyebrow">Yapay zekâ analizi</p>
+      <h2 id="ai-title" data-i18n="ai.title">İki noktada yorum: ne etkiliyor, ne yapmalı.</h2>
+      <p class="sec-lede" data-i18n="ai.lede">Her yorum formunu en çok neyin etkilediğini ve önümüzdeki 1–3 gün için tek bir odağı söyler. Takvimdeki "Haftan nasıl gidiyor" haftanı aynı şekilde özetler.</p>
+      <ul class="ai-list">
+        <li data-i18n="ai.l1">Sayıları hesaplamaz; cihazdaki skoru ve planı yorumlar.</li>
+        <li data-i18n="ai.l2">Form yorumu, plan gerekçesi ve veritabanında olmayan besinler için besin tahmini.</li>
+        <li data-i18n="ai.l3">Her çıktı, kullanıcıya ulaşmadan önce güvenlik denetiminden geçer; tıbbi bir konu geçerse hekime yönlendirir.</li>
+      </ul>
+      <div class="ai-tiers">
+        <span class="tier free" data-i18n="ai.free">Cihaz içi yorum · ücretsiz</span>
+        <span class="tier pro" data-i18n="ai.pro">Detaylı yapay zekâ yorumu · isteğe bağlı, Premium</span>
+      </div>
+    </div>
+
+    <div class="ai-card" aria-hidden="true">
+      <div class="ai-head"><span class="spark-ico">✦</span><b data-i18n="ai.card">Yapay zekâ yorumları</b><em data-i18n="hero.sample">Örnek veriler</em></div>
+      <p class="ai-quote"><span class="typed-text" data-i18n="ai.sample">Uykun üç gündür normalinin altında; yükü artırmadan önce toparlanmaya alan aç.</span></p>
+      <div class="drivers">
+        <div class="drv hot"><span data-i18n="s3.c1">Uyku</span><i style="--w:86%"></i></div>
+        <div class="drv"><span data-i18n="s3.c2">Yorgunluk</span><i style="--w:52%"></i></div>
+        <div class="drv"><span data-i18n="ai.load">Antrenman yükü</span><i style="--w:34%"></i></div>
+      </div>
+      <div class="ai-points">
+        <div class="pt"><span class="pt-n">1</span><div><b data-i18n="ai.p1t">Ne etkiliyor?</b><p data-i18n="ai.p1v">Uyku — en büyük etken</p></div></div>
+        <div class="pt"><span class="pt-n">2</span><div><b data-i18n="ai.p2t">Ne yapmalı?</b><p data-i18n="ai.p2v">Önümüzdeki 1–3 gün: mobilite, daha az hacim</p></div></div>
+      </div>
+      <div class="ai-week">
+        <b data-i18n="ai.week">Haftan nasıl gidiyor</b>
+        <p data-i18n="ai.weekSample">Bu hafta 3 seans ve 1 hafif gün var; cumartesi maçından önce yük azalıyor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="coach" id="coach" aria-labelledby="coach-title">
+  <div class="chip-rain" aria-hidden="true">
+    <div class="cr-row" data-dir="-1"><div class="cr-track">
+      <span data-i18n="ch.1">Bugün kaç kalorim kaldı?</span><span data-i18n="ch.2">Formum nasıl, bugün antrenman yapmalı mıyım?</span><span data-i18n="ch.3">Sıradaki seansım ne?</span><span data-i18n="ch.4">Bugün ne kadar su içtim?</span><span data-i18n="ch.5">Haftam nasıl gidiyor?</span>
+    </div></div>
+    <div class="cr-row" data-dir="1"><div class="cr-track">
+      <span data-i18n="ch.6">Şimdi ne yemeliyim?</span><span data-i18n="ch.7">Uykum nasıldı?</span><span data-i18n="ch.8">Bugün makrolarım nasıl?</span><span data-i18n="ch.9">Kilom nasıl gidiyor?</span><span data-i18n="ch.10">Hangi takviyeler bana uygun?</span>
+    </div></div>
+  </div>
+  <div class="wrap coach-inner">
+    <div class="chat" aria-hidden="true">
+      <div class="chat-top"><span class="dot-live"></span><b data-i18n="co.card">Koç</b><em data-i18n="co.where">Ana ekran ▸ sağ üst</em></div>
+      <div class="bubble me" data-i18n="ch.6">Şimdi ne yemeliyim?</div>
+      <div class="bubble bot typing"><i></i><i></i><i></i></div>
+      <div class="bubble bot reply"><span data-i18n="co.reply">Bugünkü antrenmanına uygun birkaç yemek önereyim; dokun, porsiyonunu seç.</span>
+        <div class="food-chips"><span>Mercimek çorbası</span><span data-i18n="co.f2">Tavuk şiş</span><span data-i18n="co.f3">Yulaf</span></div>
+      </div>
+      <div class="bubble me" data-i18n="co.q2">250 ml su ekle</div>
+      <div class="bubble bot reply ok"><span data-i18n="co.r2">Eklendi. Bugün 1.750 ml; hedefinin %70'i.</span><i class="mini-glass"><i></i></i></div>
+    </div>
+    <div class="coach-copy" data-reveal>
+      <p class="eyebrow" data-i18n="co.eyebrow">Koç</p>
+      <h2 id="coach-title" data-i18n="co.title">Takıldığında Koç'a sor.</h2>
+      <p class="sec-lede" data-i18n="co.lede">Koç bugünkü durumunu özetler ve sorularını kendi verilerinle yanıtlar. Su ve yemeği sohbetten çıkmadan ekleyebilirsin. Yanıtlar cihazında üretilir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MORE: bento -->
+<section class="more" id="more" aria-labelledby="more-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="eyebrow" data-i18n="mo.eyebrow">Ve dahası</p>
+      <h2 id="more-title" data-i18n="mo.title">Günün geri kalanı da yerinde.</h2>
+    </header>
+    <div class="bento">
+
+      <article class="bx bx-meals" data-reveal>
+        <div class="bx-vis meals-vis" aria-hidden="true">
+          <div class="mcard"><b>Mercimek çorbası</b><span>178 kcal</span></div>
+          <div class="mcard"><b data-i18n="co.f2">Tavuk şiş</b><span>254 kcal</span></div>
+          <div class="mcard"><b data-i18n="mo.meal3">Yoğurtlu yulaf</b><span>312 kcal</span></div>
+          <button type="button" class="refresh" tabindex="-1">↻</button>
+        </div>
+        <h3 data-i18n="mo.m.t">Hedefine göre öğün önerileri</h3>
+        <p data-i18n="mo.m.p">Öneriler antrenmanına ve kalan kalorine göre değişir. Besin veritabanından seçilir; kaçındığın yiyecekler önerilmez. Yenileyince liste değişir.</p>
+      </article>
+
+      <article class="bx bx-fluid" data-reveal>
+        <div class="bx-vis fluid-vis" aria-hidden="true">
+          <div class="glass"><i class="water"></i><b><span data-count="1750" data-format="int">1.750</span> ml</b></div>
+          <div class="drinks"><span data-i18n="mo.d1">Su</span><span data-i18n="mo.d2">Çay</span><span data-i18n="mo.d3">Kahve</span><span data-i18n="mo.d4">Ayran</span></div>
+        </div>
+        <h3 data-i18n="mo.f.t">Sıvı takibi</h3>
+        <p data-i18n="mo.f.p">Su, çay, kahve, maden suyu ve kalorili içecekler. Ayran, süt ya da meyve suyu besin günlüğüne de yazılır.</p>
+      </article>
+
+      <article class="bx bx-health" data-reveal>
+        <div class="bx-vis health-vis" aria-hidden="true">
+          <div class="hk-core">♥</div>
+          <span class="hk" style="--a:-90deg" data-i18n="mo.h1">Antrenmanlar</span>
+          <span class="hk" style="--a:0deg" data-i18n="s3.c1">Uyku</span>
+          <span class="hk" style="--a:90deg" data-i18n="mo.h2">Adım ve aktif enerji</span>
+          <span class="hk" style="--a:180deg" data-i18n="mo.h5">Kilo</span>
+          <span class="hk" style="--a:-148deg" data-i18n="mo.h4">Nabız ve HRV</span>
+        </div>
+        <h3 data-i18n="mo.h.t">Apple Sağlık ile çalışır</h3>
+        <p data-i18n="mo.h.p">İzin verirsen antrenman, adım, uyku, nabız ve kilo verilerin otomatik gelir. Yalnız okunur; hangi veriyi paylaşacağını tek tek sen seçersin.</p>
+      </article>
+
+      <article class="bx bx-kb" data-reveal>
+        <div class="bx-vis kb-vis" aria-hidden="true">
+          <div class="sup"><b data-i18n="mo.k1">Kreatin</b><span class="ev strong" data-i18n="mo.ev1">Güçlü kanıt</span></div>
+          <div class="sup"><b>Omega-3</b><span class="ev mod" data-i18n="mo.ev2">Orta kanıt</span></div>
+          <div class="sup no"><b>BCAA</b><span class="stamp" data-i18n="mo.no">Gerek yok</span></div>
+        </div>
+        <h3 data-i18n="mo.k.t">Takviyeler, kanıtıyla</h3>
+        <p data-i18n="mo.k.p">Her takviye kanıt düzeyiyle anlatılır: hedefine neyin yaradığını, neyin gereksiz olduğunu görürsün. Sağlık durumuna uymayanlar hiç önerilmez.</p>
+      </article>
+
+      <article class="bx bx-notif" data-reveal>
+        <div class="bx-vis act-vis" aria-hidden="true">
+          <div class="an"><div><b data-i18n="mo.n1">1 saat sonra: Futbol</b><span data-i18n="mo.n1b">Hafif bir şey ye, su iç.</span></div>
+            <div class="an-act"><span class="done" data-i18n="mo.done">Yaptım</span><span data-i18n="mo.snooze">Ertele</span></div></div>
+          <div class="an small"><div><b data-i18n="mo.n2">Tartı zamanı</b><span data-i18n="mo.n2b">Sabah, kahvaltıdan önce.</span></div></div>
+        </div>
+        <h3 data-i18n="mo.a.t">Bildirimden "Yaptım"</h3>
+        <p data-i18n="mo.a.p">Seans hatırlatmasında "Yaptım"a basınca seans kaydedilir ve hedefin güncellenir; "Ertele" ile sonraya alırsın. Tartı hatırlatması da planına göre kurulur.</p>
+      </article>
+
+      <article class="bx bx-prog" data-reveal>
+        <div class="bx-vis prog-vis" aria-hidden="true">
+          <div class="set"><b>Squat</b><span>4 × 8</span></div>
+          <div class="set"><b>Bench press</b><span>4 × 6</span></div>
+          <div class="set"><b data-i18n="mo.p3">Barfiks</b><span>3 × 10</span></div>
+        </div>
+        <h3 data-i18n="mo.p.t">Kendi programların</h3>
+        <p data-i18n="mo.p.p">Set ve tekrarlarıyla kendi antrenman programlarını kur, egzersiz veritabanından hızlıca ekle.</p>
+        <span class="tag-pro">Premium</span>
+      </article>
+
+      <article class="bx bx-safe" data-reveal>
+        <div class="bx-vis safe-vis" aria-hidden="true">
+          <div class="shield"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg></div>
+        </div>
+        <div class="safe-txt">
+        <h3 data-i18n="mo.s.t">Sağlık taraması, her sürümde ücretsiz</h3>
+        <p data-i18n="mo.s.p">Asla tanı koymaz. Cevapların yalnız hedeflerini güvenli yönde daraltır; örneğin hamilelikte kalori açığı uygulanmaz ve gerektiğinde bir uzmana yönlendirir.</p>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>

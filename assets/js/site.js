@@ -216,6 +216,122 @@
     tl.to({}, { duration: 0.4 }); // hold on the last step
   }
 
+  /* ---- setup: the track fills with scroll, steps light up as the line reaches them ---- */
+  var track = document.querySelector('.track');
+  if (track) {
+    var fill = document.createElement('i');
+    fill.className = 'track-fill';
+    track.appendChild(fill);
+    var items = gsap.utils.toArray('.track li');
+    gsap.fromTo(fill, { scaleY: 0 }, { scaleY: 1, ease: 'none',
+      scrollTrigger: { trigger: track, start: 'top 65%', end: 'bottom 65%', scrub: 0.4 } });
+    items.forEach(function (li) {
+      gsap.from(li, { y: 24, opacity: 0, duration: 0.8, ease: 'power3.out',
+        scrollTrigger: { trigger: li, start: 'top 85%', once: true } });
+      ST.create({ trigger: li, start: 'top 65%', onEnter: function () { li.classList.add('on'); }, onLeaveBack: function () { li.classList.remove('on'); } });
+    });
+  }
+
+  /* ---- AI card: typewriter quote, driver bars, two points, weekly note ---- */
+  var aiCard = document.querySelector('.ai-card');
+  if (aiCard) {
+    var typed = aiCard.querySelector('.typed-text');
+    function splitChars() {
+      var t = typed.textContent;
+      typed.innerHTML = Array.prototype.map.call(t, function (c) {
+        return '<span class="ch">' + (c === '<' ? '&lt;' : c === '&' ? '&amp;' : c) + '</span>';
+      }).join('');
+      return typed.querySelectorAll('.ch');
+    }
+    var aiTl = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } });
+    aiTl.from(aiCard, { y: 60, opacity: 0, rotateX: 8, duration: 1 })
+      .add(function () {
+        var chars = splitChars();
+        gsap.to(chars, { opacity: 1, duration: 0.01, stagger: 0.022, ease: 'none' });
+      }, 0.4)
+      .from('.drv i', { scaleX: 0, transformOrigin: 'left', stagger: 0.12, duration: 0.9 }, 0.9)
+      .fromTo('.drv.hot i', { boxShadow: '0 0 0 rgba(255,55,95,0)' }, { boxShadow: '0 0 18px rgba(255,55,95,.7)', repeat: 3, yoyo: true, duration: 0.6 }, 1.6)
+      .from('.pt', { y: 24, opacity: 0, scale: 0.95, stagger: 0.25, duration: 0.7 }, 2)
+      .from('.ai-week', { y: 16, opacity: 0, duration: 0.7 }, 2.6);
+    ST.create({ trigger: aiCard, start: 'top 75%', once: true, onEnter: function () { aiTl.play(); } });
+    gsap.to('.ai-glow', { yPercent: 40, xPercent: -10, ease: 'none',
+      scrollTrigger: { trigger: '.ai', start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.to(aiCard, { yPercent: -8, ease: 'none',
+      scrollTrigger: { trigger: '.ai', start: 'top bottom', end: 'bottom top', scrub: true } });
+  }
+
+  /* ---- coach: question chips drift with scroll, chat plays like a conversation ---- */
+  gsap.utils.toArray('.cr-row').forEach(function (row) {
+    var dir = +row.getAttribute('data-dir');
+    var tr = row.querySelector('.cr-track');
+    tr.innerHTML += tr.innerHTML;
+    gsap.fromTo(tr, { xPercent: dir < 0 ? 0 : -25 }, { xPercent: dir < 0 ? -25 : 0, ease: 'none',
+      scrollTrigger: { trigger: '.coach', start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
+  });
+  var chat = document.querySelector('.chat');
+  if (chat) {
+    var b = chat.querySelectorAll('.bubble:not(.typing)');
+    var typing = chat.querySelector('.typing');
+    var pop = { y: 16, opacity: 0, scale: 0.9, duration: 0.5, ease: 'back.out(1.8)' };
+    gsap.set(b, { opacity: 0 });
+    var ctl = gsap.timeline({ paused: true });
+    ctl.fromTo(b[0], pop, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)', transformOrigin: 'right bottom' })
+      .add(function () { typing.style.display = 'flex'; }, '+=0.2')
+      .fromTo(typing, { opacity: 0 }, { opacity: 1, duration: 0.2 })
+      .add(function () { typing.style.display = 'none'; }, '+=1')
+      .fromTo(b[1], pop, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)', transformOrigin: 'left bottom' })
+      .from(b[1].querySelectorAll('.food-chips span'), { scale: 0, opacity: 0, stagger: 0.1, duration: 0.4, ease: 'back.out(2)' }, '-=0.1')
+      .fromTo(b[2], pop, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)', transformOrigin: 'right bottom' }, '+=0.6')
+      .fromTo(b[3], pop, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.8)', transformOrigin: 'left bottom' }, '+=0.7')
+      .from(b[3].querySelector('.mini-glass i'), { scaleY: 0, transformOrigin: 'bottom', duration: 0.9, ease: 'power2.out' }, '-=0.2');
+    ST.create({ trigger: chat, start: 'top 70%', once: true, onEnter: function () { ctl.play(); } });
+  }
+
+  /* ---- bento visuals ---- */
+  var meals = document.querySelector('.meals-vis');
+  if (meals) {
+    // Rotate the suggestion list like the in-app refresh button.
+    var refreshBtn = meals.querySelector('.refresh');
+    var shuffle = function () {
+      var cards = meals.querySelectorAll('.mcard');
+      gsap.to(refreshBtn, { rotate: '+=360', duration: 0.6, ease: 'power2.inOut' });
+      gsap.to(cards, { x: 30, opacity: 0, stagger: 0.05, duration: 0.25, ease: 'power2.in' });
+      gsap.delayedCall(0.45, function () {
+        meals.insertBefore(cards[cards.length - 1], cards[0]);
+        gsap.fromTo(meals.querySelectorAll('.mcard'), { x: -30, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.06, duration: 0.4, ease: 'power3.out' });
+      });
+    };
+    var mealLoop;
+    ST.create({ trigger: meals, start: 'top 90%', end: 'bottom 10%',
+      onToggle: function (self) {
+        if (self.isActive) { mealLoop = setInterval(shuffle, 2600); } else { clearInterval(mealLoop); }
+      } });
+  }
+  var glassWater = document.querySelector('.glass .water');
+  if (glassWater) {
+    gsap.from(glassWater, { height: 0, duration: 1.8, ease: 'power2.out',
+      scrollTrigger: { trigger: '.glass', start: 'top 85%', once: true, onEnter: function () {
+        countUp(document.querySelector('.glass [data-count]'), 0);
+      } } });
+    gsap.from('.drinks span', { y: 14, opacity: 0, stagger: 0.08, duration: 0.5, ease: 'back.out(2)',
+      scrollTrigger: { trigger: '.glass', start: 'top 85%', once: true } });
+  }
+  gsap.from('.hk', { opacity: 0, filter: 'blur(6px)', stagger: 0.12, duration: 0.6, ease: 'power2.out', // transform holds the ellipse position
+    scrollTrigger: { trigger: '.health-vis', start: 'top 85%', once: true } });
+  gsap.to('.hk-core', { scale: 1.12, repeat: -1, yoyo: true, duration: 0.7, ease: 'sine.inOut' });
+  gsap.from('.sup', { x: -24, opacity: 0, stagger: 0.12, duration: 0.6, ease: 'power3.out',
+    scrollTrigger: { trigger: '.kb-vis', start: 'top 85%', once: true } });
+  gsap.from('.stamp', { scale: 2.6, opacity: 0, rotate: -30, duration: 0.45, delay: 0.6, ease: 'power4.in',
+    scrollTrigger: { trigger: '.kb-vis', start: 'top 85%', once: true } });
+  gsap.from('.an', { y: -30, opacity: 0, stagger: 0.25, duration: 0.6, ease: 'back.out(1.6)',
+    scrollTrigger: { trigger: '.act-vis', start: 'top 85%', once: true } });
+  gsap.to('.an-act .done', { scale: 0.92, repeat: -1, repeatDelay: 1.6, yoyo: true, duration: 0.18, ease: 'power2.inOut',
+    scrollTrigger: { trigger: '.act-vis', start: 'top 85%' } });
+  gsap.from('.set', { x: 30, opacity: 0, stagger: 0.12, duration: 0.6, ease: 'power3.out',
+    scrollTrigger: { trigger: '.prog-vis', start: 'top 85%', once: true } });
+  gsap.from('.shield', { scale: 0.3, rotate: -20, opacity: 0, duration: 1, ease: 'elastic.out(1, .5)',
+    scrollTrigger: { trigger: '.safe-vis', start: 'top 85%', once: true } });
+
   /* ---- privacy: word-by-word statement + orbit parallax ---- */
   var statement = document.querySelector('[data-words]');
   var wordTween;
