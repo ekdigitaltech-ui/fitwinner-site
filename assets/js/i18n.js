@@ -44,6 +44,7 @@
     'how.eyebrow': 'How it works', 'how.title': 'Every number knows where it came from.',
     's1.t': 'Calories that fit your day',
     's1.p': 'Your target is calculated from your age, weight, job and training load. Active calories and workouts from Apple Watch are added automatically. You can see the calculation line by line.',
+    's2.nav': 'Food log', 's3.nav': 'Form score', 's4.nav': 'Weekly plan',
     's1.scr': 'Energy breakdown', 's1.bmr': 'Basal metabolism', 's1.job': 'Job and daily movement', 's1.train': 'Planned training', 's1.goal': 'Goal adjustment',
     's2.t': 'Food logging that knows Turkish cuisine',
     's2.p': 'Search thousands of local and international foods and pick a portion. Add a recipe’s ingredients and the totals come from the database. Estimated values are marked as estimated.',

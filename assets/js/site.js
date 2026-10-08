@@ -78,24 +78,9 @@
   }
   html.classList.add('motion');
 
-  // Smooth scroll, driven by GSAP's ticker so ScrollTrigger stays in sync.
-  var lenis = null;
-  if (window.Lenis) {
-    lenis = new window.Lenis({ lerp: 0.1, smoothWheel: true });
-    lenis.on('scroll', ST.update);
-    ST.addEventListener('refresh', function () { lenis.resize(); });
-    gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
-    gsap.ticker.lagSmoothing(0);
-    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        var id = a.getAttribute('href');
-        var target = id === '#top' ? 0 : document.querySelector(id);
-        if (target === null) return;
-        e.preventDefault();
-        lenis.scrollTo(target, { offset: id === '#how' ? -10 : -70, duration: 1.4 });
-      });
-    });
-  }
+  // Native scrolling (no Lenis): a smooth-scroll layer kept its own scroll position, and on
+  // zoom/resize ScrollTrigger's re-measure could snap the page to the top or leave the
+  // "How it works" steps measured at the wrong place. Anchor links use CSS smooth scrolling.
 
   function countUp(el, delay) {
     var end = +el.getAttribute('data-count');
@@ -204,31 +189,51 @@
     });
   } else {
     // Sticky, not pinned: the browser keeps .showcase-inner inside its own (tall) .showcase box,
-    // so zoom/resize or a fast scroll can never leave a step stuck over another section
-    // (ScrollTrigger's position:fixed pin could). The timeline only scrubs across that box.
+    // so zoom/resize or a fast scroll can never leave a step stuck over another section.
+    // Scroll only picks WHICH step is active; the change itself is a short, complete transition,
+    // so there are no half-faded overlaps and a fast scroll can't skip past a step unseen.
     var n = steps.length;
-    document.querySelector('.showcase').style.setProperty('--steps', n);
-    var tl = gsap.timeline({
-      defaults: { ease: 'power2.inOut', duration: 0.5 },
-      scrollTrigger: {
-        trigger: '.showcase', start: 'top top', end: 'bottom bottom', scrub: 0.8,
-        invalidateOnRefresh: true,
-        onUpdate: function (self) {
-          var i = Math.min(n - 1, Math.floor(self.progress * n + 0.15));
-          enterScreen(i);
-        },
-        onEnter: function () { enterScreen(0); }
-      }
-    });
-    tl.to('.sc-progress i', { scaleX: 1, ease: 'none', duration: n }, 0);
-    for (var i = 1; i < n; i++) {
-      var at = i - 0.25;
-      tl.to(steps[i - 1], { autoAlpha: 0, y: -40 }, at)
-        .fromTo(steps[i], { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, immediateRender: false }, at + 0.15)
-        .to(screens[i - 1], { autoAlpha: 0, scale: 0.94, yPercent: -6 }, at)
-        .fromTo(screens[i], { autoAlpha: 0, scale: 1.06, yPercent: 6 }, { autoAlpha: 1, scale: 1, yPercent: 0, immediateRender: false }, at + 0.1);
+    var showcase = document.querySelector('.showcase');
+    showcase.style.setProperty('--steps', n);
+    var navBtns = Array.prototype.slice.call(document.querySelectorAll('.sc-nav button'));
+    var bar = document.querySelector('.sc-progress i');
+    var current = -1;
+    function show(i, instant) {
+      if (i === current) return;
+      var dir = i > current ? 1 : -1;
+      current = i;
+      steps.forEach(function (st, k) {
+        var on = k === i;
+        gsap.killTweensOf([st, screens[k]]);
+        if (instant) {
+          gsap.set(st, { autoAlpha: on ? 1 : 0, y: 0 });
+          gsap.set(screens[k], { autoAlpha: on ? 1 : 0, scale: 1, yPercent: 0 });
+        } else if (on) {
+          gsap.fromTo(st, { autoAlpha: 0, y: 30 * dir }, { autoAlpha: 1, y: 0, duration: 0.55, delay: 0.12, ease: 'power3.out' });
+          gsap.fromTo(screens[k], { autoAlpha: 0, scale: 1.05, yPercent: 5 * dir }, { autoAlpha: 1, scale: 1, yPercent: 0, duration: 0.6, delay: 0.08, ease: 'power3.out' });
+        } else {
+          gsap.to(st, { autoAlpha: 0, y: -24 * dir, duration: 0.2, ease: 'power2.in' });
+          gsap.to(screens[k], { autoAlpha: 0, scale: 0.96, duration: 0.2, ease: 'power2.in' });
+        }
+        if (navBtns[k]) navBtns[k].classList.toggle('on', on);
+      });
+      enterScreen(i);
     }
-    tl.to({}, { duration: 0.4 }); // hold on the last step
+    show(0, true);
+    var sct = ST.create({
+      trigger: showcase, start: 'top top', end: 'bottom bottom',
+      onUpdate: function (self) {
+        gsap.set(bar, { scaleX: self.progress });
+        show(Math.min(n - 1, Math.floor(self.progress * n)));
+      },
+      onRefresh: function (self) { show(Math.min(n - 1, Math.floor(self.progress * n)), true); }
+    });
+    navBtns.forEach(function (b, k) {
+      b.addEventListener('click', function () {
+        var y = sct.start + (sct.end - sct.start) * (k + 0.5) / n;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    });
   }
 
   /* ---- setup: the track fills with scroll, steps light up as the line reaches them ---- */
