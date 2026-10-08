@@ -90,18 +90,29 @@
   }
 
   /* ---- hero intro ---- */
+  // Text plays on load. The phone stage has its own timeline: on a phone the stage sits below
+  // the fold, so it waits until it scrolls into view (otherwise it finished before anyone saw it).
   var intro = gsap.timeline({ defaults: { ease: 'expo.out', duration: 1.2 } });
   intro.from('.hero .eyebrow', { y: 20, opacity: 0 })
     .from('.hero-title .line', { yPercent: 110, opacity: 0, stagger: 0.09, duration: 1.3 }, '-=1')
-    .from('.lede, .hero-cta, .hero-facts', { y: 24, opacity: 0, stagger: 0.08 }, '-=1')
-    .from('.hero-phone', { y: 120, rotateX: 18, opacity: 0, duration: 1.6 }, 0.15)
-    .from('.float-card', { y: 60, scale: 0.85, opacity: 0, stagger: 0.12, duration: 1.2 }, 0.6)
-    .from('.ring-deco', { scale: 0.6, opacity: 0, duration: 2 }, 0.1)
+    .from('.lede, .hero-cta, .hero-facts', { y: 24, opacity: 0, stagger: 0.08 }, '-=1');
+
+  var stageTl = gsap.timeline({ paused: true, defaults: { ease: 'expo.out', duration: 1.2 } });
+  stageTl.from('.hero-phone', { y: 120, rotateX: 18, opacity: 0, duration: 1.6 }, 0)
+    .from('.float-card', { y: 60, scale: 0.85, opacity: 0, stagger: 0.12, duration: 1.2 }, 0.45)
+    .from('.ring-deco', { scale: 0.6, opacity: 0, duration: 2 }, 0)
     .add(function () {
       document.querySelectorAll('.hero [data-count]:not([data-static])').forEach(function (el, i) { countUp(el, i * 0.08); });
-    }, 0.7)
-    .from('.hero .macros i, .hero .bar i', { scaleX: 0, transformOrigin: 'left', stagger: 0.06, duration: 1 }, 0.9)
-    .fromTo('.hero .spark path', { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' }, 0.9);
+    }, 0.55)
+    .from('.hero .macros i, .hero .bar i', { scaleX: 0, transformOrigin: 'left', stagger: 0.06, duration: 1 }, 0.75)
+    .fromTo('.hero .spark path', { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' }, 0.75);
+  var stageEl = document.querySelector('.hero-stage');
+  if (stageEl.getBoundingClientRect().top < window.innerHeight * 0.75) {
+    gsap.delayedCall(0.15, function () { stageTl.play(); });
+  } else {
+    document.querySelectorAll('.hero [data-count]:not([data-static])').forEach(function (el) { el.textContent = fmt(0); });
+    ST.create({ trigger: stageEl, start: 'top 80%', once: true, onEnter: function () { stageTl.play(); } });
+  }
 
   /* ---- hero parallax: scroll depth ---- */
   gsap.utils.toArray('.hero [data-depth]').forEach(function (el) {
