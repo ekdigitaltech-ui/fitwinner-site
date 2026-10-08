@@ -30,12 +30,12 @@
 <meta name="twitter:title" content="FitWinner — Kalori, antrenman ve toparlanma">
 <meta name="twitter:description" content="Kalori hedefin, makroların ve form skorun telefonunda, senin verilerinle hesaplanır. Yakında App Store'da.">
 <meta name="twitter:image" content="https://fitwinner.app/assets/img/og-tr-1200x630.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=20261008t">
+<link rel="stylesheet" href="assets/css/site.css?v=20261008u">
 <script>document.documentElement.classList.add('js')</script>
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/i18n.js?v=20261008t" defer></script>
-<script src="assets/js/site.js?v=20261008t" defer></script>
+<script src="assets/js/i18n.js?v=20261008u" defer></script>
+<script src="assets/js/site.js?v=20261008u" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
@@ -225,6 +225,74 @@
   </div>
 </section>
 
+<!-- AI COMMENTARY -->
+<section class="ai" id="ai" aria-labelledby="ai-title">
+  <div class="ai-glow" aria-hidden="true"></div>
+  <div class="wrap ai-inner">
+    <div class="ai-copy" data-reveal>
+      <p class="eyebrow" data-i18n="ai.eyebrow">Yapay zekâ analizi</p>
+      <h2 id="ai-title" data-i18n="ai.title">Yapay zekâ iki şey söyler: seni ne etkiliyor, ne yapmalısın.</h2>
+      <p class="sec-lede" data-i18n="ai.lede">Her yorum, formunu en çok neyin etkilediğini ve önümüzdeki 1–3 günde neye odaklanman gerektiğini söyler. Takvimdeki "Haftan nasıl gidiyor" da haftanı aynı şekilde özetler.</p>
+      <ul class="ai-list">
+        <li data-i18n="ai.l1">Sayıları kendisi hesaplamaz; telefonunun hesapladığı skoru ve planı yorumlar.</li>
+        <li data-i18n="ai.l2">Formunu yorumlar, planının neden böyle olduğunu anlatır, veritabanında olmayan yiyeceklerin değerini tahmin eder.</li>
+        <li data-i18n="ai.l3">Yazdığı her şey sana ulaşmadan önce güvenlik kontrolünden geçer. Sağlıkla ilgili bir konu çıkarsa seni doktora yönlendirir.</li>
+      </ul>
+      <div class="ai-tiers">
+        <span class="tier free" data-i18n="ai.free">Telefondaki yorum · ücretsiz</span>
+        <span class="tier pro" data-i18n="ai.pro">Ayrıntılı yapay zekâ yorumu · isteğe bağlı, Premium</span>
+      </div>
+    </div>
+
+    <div class="ai-card" aria-hidden="true">
+      <div class="ai-head"><span class="spark-ico">✦</span><b data-i18n="ai.card">Yapay zekâ yorumları</b><em data-i18n="hero.sample">Örnek veriler</em></div>
+      <p class="ai-quote"><span class="typed-text" data-i18n="ai.sample">Üç gündür normalinden az uyuyorsun. Antrenmanı artırmadan önce biraz dinlen.</span></p>
+      <div class="drivers">
+        <div class="drv hot"><span data-i18n="s3.c1">Uyku</span><i style="--w:86%"></i></div>
+        <div class="drv"><span data-i18n="s3.c2">Yorgunluk</span><i style="--w:52%"></i></div>
+        <div class="drv"><span data-i18n="ai.load">Antrenman yükü</span><i style="--w:34%"></i></div>
+      </div>
+      <div class="ai-points">
+        <div class="pt"><span class="pt-n">1</span><div><b data-i18n="ai.p1t">Ne etkiliyor?</b><p data-i18n="ai.p1v">Uyku — en büyük etken</p></div></div>
+        <div class="pt"><span class="pt-n">2</span><div><b data-i18n="ai.p2t">Ne yapmalı?</b><p data-i18n="ai.p2v">Önümüzdeki 1–3 gün: mobilite, daha hafif antrenman</p></div></div>
+      </div>
+      <div class="ai-week">
+        <b data-i18n="ai.week">Haftan nasıl gidiyor</b>
+        <p data-i18n="ai.weekSample">Bu hafta 3 antrenman ve 1 hafif gün var; cumartesi maçından önce tempo düşüyor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="coach" id="coach" aria-labelledby="coach-title">
+  <div class="chip-rain" aria-hidden="true">
+    <div class="cr-row" data-dir="-1"><div class="cr-track">
+      <span data-i18n="ch.1">Bugün kaç kalorim kaldı?</span><span data-i18n="ch.2">Formum nasıl, bugün antrenman yapmalı mıyım?</span><span data-i18n="ch.3">Sıradaki seansım ne?</span><span data-i18n="ch.4">Bugün ne kadar su içtim?</span><span data-i18n="ch.5">Haftam nasıl gidiyor?</span>
+    </div></div>
+    <div class="cr-row" data-dir="1"><div class="cr-track">
+      <span data-i18n="ch.6">Şimdi ne yemeliyim?</span><span data-i18n="ch.7">Uykum nasıldı?</span><span data-i18n="ch.8">Bugün makrolarım nasıl?</span><span data-i18n="ch.9">Kilom nasıl gidiyor?</span><span data-i18n="ch.10">Hangi takviyeler bana uygun?</span>
+    </div></div>
+  </div>
+  <div class="wrap coach-inner">
+    <div class="chat" aria-hidden="true">
+      <div class="chat-top"><span class="dot-live"></span><b data-i18n="co.card">Koç</b><em data-i18n="co.where">Ana ekran ▸ sağ üst</em></div>
+      <div class="bubble me" data-i18n="ch.6">Şimdi ne yemeliyim?</div>
+      <div class="bubble bot typing"><i></i><i></i><i></i></div>
+      <div class="bubble bot reply"><span data-i18n="co.reply">Bugünkü antrenmanına uygun birkaç yemek önereyim; dokun, porsiyonunu seç.</span>
+        <div class="food-chips"><span>Mercimek çorbası</span><span data-i18n="co.f2">Tavuk şiş</span><span data-i18n="co.f3">Yulaf</span></div>
+      </div>
+      <div class="bubble me" data-i18n="co.q2">250 ml su ekle</div>
+      <div class="bubble bot reply ok"><span data-i18n="co.r2">Eklendi. Bugün 1.750 ml; hedefinin %70'i.</span><i class="mini-glass"><i></i></i></div>
+    </div>
+    <div class="coach-copy" data-reveal>
+      <p class="eyebrow" data-i18n="co.eyebrow">Koç</p>
+      <h2 id="coach-title" data-i18n="co.title">Takıldığında Koç'a sor.</h2>
+      <p class="sec-lede" data-i18n="co.lede">Koç günün nasıl geçtiğini özetler, sorularını kendi verilerine bakarak yanıtlar. Su ve yemeği sohbetten çıkmadan ekleyebilirsin. Yanıtlar telefonunda hazırlanır.</p>
+    </div>
+  </div>
+</section>
+
 <!-- HOW: pinned showcase -->
 <section class="how" id="how" aria-labelledby="how-title">
   <div class="showcase">
@@ -363,74 +431,6 @@
       <li><i class="tk-dot"></i><b data-i18n="su.7t">Beslenme ve sağlık</b><span data-i18n="su.7p">Yemediğin yiyecekler ve istersen kısa bir sağlık taraması.</span></li>
       <li><i class="tk-dot"></i><b data-i18n="su.8t">Özet</b><span data-i18n="su.8p">Günlük hedefin ve nasıl hesaplandığı, satır satır.</span></li>
     </ol>
-  </div>
-</section>
-
-<!-- AI COMMENTARY -->
-<section class="ai" id="ai" aria-labelledby="ai-title">
-  <div class="ai-glow" aria-hidden="true"></div>
-  <div class="wrap ai-inner">
-    <div class="ai-copy" data-reveal>
-      <p class="eyebrow" data-i18n="ai.eyebrow">Yapay zekâ analizi</p>
-      <h2 id="ai-title" data-i18n="ai.title">Yapay zekâ iki şey söyler: seni ne etkiliyor, ne yapmalısın.</h2>
-      <p class="sec-lede" data-i18n="ai.lede">Her yorum, formunu en çok neyin etkilediğini ve önümüzdeki 1–3 günde neye odaklanman gerektiğini söyler. Takvimdeki "Haftan nasıl gidiyor" da haftanı aynı şekilde özetler.</p>
-      <ul class="ai-list">
-        <li data-i18n="ai.l1">Sayıları kendisi hesaplamaz; telefonunun hesapladığı skoru ve planı yorumlar.</li>
-        <li data-i18n="ai.l2">Formunu yorumlar, planının neden böyle olduğunu anlatır, veritabanında olmayan yiyeceklerin değerini tahmin eder.</li>
-        <li data-i18n="ai.l3">Yazdığı her şey sana ulaşmadan önce güvenlik kontrolünden geçer. Sağlıkla ilgili bir konu çıkarsa seni doktora yönlendirir.</li>
-      </ul>
-      <div class="ai-tiers">
-        <span class="tier free" data-i18n="ai.free">Telefondaki yorum · ücretsiz</span>
-        <span class="tier pro" data-i18n="ai.pro">Ayrıntılı yapay zekâ yorumu · isteğe bağlı, Premium</span>
-      </div>
-    </div>
-
-    <div class="ai-card" aria-hidden="true">
-      <div class="ai-head"><span class="spark-ico">✦</span><b data-i18n="ai.card">Yapay zekâ yorumları</b><em data-i18n="hero.sample">Örnek veriler</em></div>
-      <p class="ai-quote"><span class="typed-text" data-i18n="ai.sample">Üç gündür normalinden az uyuyorsun. Antrenmanı artırmadan önce biraz dinlen.</span></p>
-      <div class="drivers">
-        <div class="drv hot"><span data-i18n="s3.c1">Uyku</span><i style="--w:86%"></i></div>
-        <div class="drv"><span data-i18n="s3.c2">Yorgunluk</span><i style="--w:52%"></i></div>
-        <div class="drv"><span data-i18n="ai.load">Antrenman yükü</span><i style="--w:34%"></i></div>
-      </div>
-      <div class="ai-points">
-        <div class="pt"><span class="pt-n">1</span><div><b data-i18n="ai.p1t">Ne etkiliyor?</b><p data-i18n="ai.p1v">Uyku — en büyük etken</p></div></div>
-        <div class="pt"><span class="pt-n">2</span><div><b data-i18n="ai.p2t">Ne yapmalı?</b><p data-i18n="ai.p2v">Önümüzdeki 1–3 gün: mobilite, daha hafif antrenman</p></div></div>
-      </div>
-      <div class="ai-week">
-        <b data-i18n="ai.week">Haftan nasıl gidiyor</b>
-        <p data-i18n="ai.weekSample">Bu hafta 3 antrenman ve 1 hafif gün var; cumartesi maçından önce tempo düşüyor.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COACH -->
-<section class="coach" id="coach" aria-labelledby="coach-title">
-  <div class="chip-rain" aria-hidden="true">
-    <div class="cr-row" data-dir="-1"><div class="cr-track">
-      <span data-i18n="ch.1">Bugün kaç kalorim kaldı?</span><span data-i18n="ch.2">Formum nasıl, bugün antrenman yapmalı mıyım?</span><span data-i18n="ch.3">Sıradaki seansım ne?</span><span data-i18n="ch.4">Bugün ne kadar su içtim?</span><span data-i18n="ch.5">Haftam nasıl gidiyor?</span>
-    </div></div>
-    <div class="cr-row" data-dir="1"><div class="cr-track">
-      <span data-i18n="ch.6">Şimdi ne yemeliyim?</span><span data-i18n="ch.7">Uykum nasıldı?</span><span data-i18n="ch.8">Bugün makrolarım nasıl?</span><span data-i18n="ch.9">Kilom nasıl gidiyor?</span><span data-i18n="ch.10">Hangi takviyeler bana uygun?</span>
-    </div></div>
-  </div>
-  <div class="wrap coach-inner">
-    <div class="chat" aria-hidden="true">
-      <div class="chat-top"><span class="dot-live"></span><b data-i18n="co.card">Koç</b><em data-i18n="co.where">Ana ekran ▸ sağ üst</em></div>
-      <div class="bubble me" data-i18n="ch.6">Şimdi ne yemeliyim?</div>
-      <div class="bubble bot typing"><i></i><i></i><i></i></div>
-      <div class="bubble bot reply"><span data-i18n="co.reply">Bugünkü antrenmanına uygun birkaç yemek önereyim; dokun, porsiyonunu seç.</span>
-        <div class="food-chips"><span>Mercimek çorbası</span><span data-i18n="co.f2">Tavuk şiş</span><span data-i18n="co.f3">Yulaf</span></div>
-      </div>
-      <div class="bubble me" data-i18n="co.q2">250 ml su ekle</div>
-      <div class="bubble bot reply ok"><span data-i18n="co.r2">Eklendi. Bugün 1.750 ml; hedefinin %70'i.</span><i class="mini-glass"><i></i></i></div>
-    </div>
-    <div class="coach-copy" data-reveal>
-      <p class="eyebrow" data-i18n="co.eyebrow">Koç</p>
-      <h2 id="coach-title" data-i18n="co.title">Takıldığında Koç'a sor.</h2>
-      <p class="sec-lede" data-i18n="co.lede">Koç günün nasıl geçtiğini özetler, sorularını kendi verilerine bakarak yanıtlar. Su ve yemeği sohbetten çıkmadan ekleyebilirsin. Yanıtlar telefonunda hazırlanır.</p>
-    </div>
   </div>
 </section>
 

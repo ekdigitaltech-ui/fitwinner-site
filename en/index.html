@@ -30,12 +30,12 @@
 <meta name="twitter:title" content="FitWinner — Calories, training and recovery">
 <meta name="twitter:description" content="Your calorie target, macros and form score, worked out on your phone from your own data. For iPhone and Apple Watch. Coming soon to the App Store.">
 <meta name="twitter:image" content="https://fitwinner.app/assets/img/og-en-1200x630.jpg">
-<link rel="stylesheet" href="../assets/css/site.css?v=20261008t">
+<link rel="stylesheet" href="../assets/css/site.css?v=20261008u">
 <script>document.documentElement.classList.add('js')</script>
 <script src="../assets/vendor/gsap.min.js" defer></script>
 <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="../assets/js/i18n.js?v=20261008t" defer></script>
-<script src="../assets/js/site.js?v=20261008t" defer></script>
+<script src="../assets/js/i18n.js?v=20261008u" defer></script>
+<script src="../assets/js/site.js?v=20261008u" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
@@ -225,6 +225,74 @@
   </div>
 </section>
 
+<!-- AI COMMENTARY -->
+<section class="ai" id="ai" aria-labelledby="ai-title">
+  <div class="ai-glow" aria-hidden="true"></div>
+  <div class="wrap ai-inner">
+    <div class="ai-copy" data-reveal>
+      <p class="eyebrow" data-i18n="ai.eyebrow">AI analysis</p>
+      <h2 id="ai-title" data-i18n="ai.title">The AI tells you two things: what's affecting you and what to do about it.</h2>
+      <p class="sec-lede" data-i18n="ai.lede">Every comment tells you what's affecting your form most and what to focus on over the next 1–3 days. “How your week is going” in the Calendar sums up your week the same way.</p>
+      <ul class="ai-list">
+        <li data-i18n="ai.l1">It doesn't do the math itself; it explains the score and plan your phone already worked out.</li>
+        <li data-i18n="ai.l2">It comments on your form, explains why your plan looks the way it does and estimates foods that aren't in the database.</li>
+        <li data-i18n="ai.l3">Everything it writes is safety-checked before you see it. If something health-related comes up, it points you to a doctor.</li>
+      </ul>
+      <div class="ai-tiers">
+        <span class="tier free" data-i18n="ai.free">On-phone comments · free</span>
+        <span class="tier pro" data-i18n="ai.pro">Detailed AI comments · optional, Premium</span>
+      </div>
+    </div>
+
+    <div class="ai-card" aria-hidden="true">
+      <div class="ai-head"><span class="spark-ico">✦</span><b data-i18n="ai.card">AI commentary</b><em data-i18n="hero.sample">Sample data</em></div>
+      <p class="ai-quote"><span class="typed-text" data-i18n="ai.sample">You've slept less than usual for three days. Take it easy before you add more training.</span></p>
+      <div class="drivers">
+        <div class="drv hot"><span data-i18n="s3.c1">Sleep</span><i style="--w:86%"></i></div>
+        <div class="drv"><span data-i18n="s3.c2">Fatigue</span><i style="--w:52%"></i></div>
+        <div class="drv"><span data-i18n="ai.load">Training load</span><i style="--w:34%"></i></div>
+      </div>
+      <div class="ai-points">
+        <div class="pt"><span class="pt-n">1</span><div><b data-i18n="ai.p1t">What affects it?</b><p data-i18n="ai.p1v">Sleep — the biggest driver</p></div></div>
+        <div class="pt"><span class="pt-n">2</span><div><b data-i18n="ai.p2t">What to do?</b><p data-i18n="ai.p2v">Next 1–3 days: mobility, lighter training</p></div></div>
+      </div>
+      <div class="ai-week">
+        <b data-i18n="ai.week">How your week is going</b>
+        <p data-i18n="ai.weekSample">3 workouts and 1 easy day this week; things ease off before Saturday's match.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="coach" id="coach" aria-labelledby="coach-title">
+  <div class="chip-rain" aria-hidden="true">
+    <div class="cr-row" data-dir="-1"><div class="cr-track">
+      <span data-i18n="ch.1">How many calories do I have left today?</span><span data-i18n="ch.2">How’s my form, should I train today?</span><span data-i18n="ch.3">What’s my next session?</span><span data-i18n="ch.4">How much water have I had today?</span><span data-i18n="ch.5">How is my week going?</span>
+    </div></div>
+    <div class="cr-row" data-dir="1"><div class="cr-track">
+      <span data-i18n="ch.6">What should I eat now?</span><span data-i18n="ch.7">How did I sleep?</span><span data-i18n="ch.8">How are my macros today?</span><span data-i18n="ch.9">How is my weight trending?</span><span data-i18n="ch.10">Which supplements suit me?</span>
+    </div></div>
+  </div>
+  <div class="wrap coach-inner">
+    <div class="chat" aria-hidden="true">
+      <div class="chat-top"><span class="dot-live"></span><b data-i18n="co.card">Coach</b><em data-i18n="co.where">Home ▸ top right</em></div>
+      <div class="bubble me" data-i18n="ch.6">What should I eat now?</div>
+      <div class="bubble bot typing"><i></i><i></i><i></i></div>
+      <div class="bubble bot reply"><span data-i18n="co.reply">Here are a few foods that fit today’s training; tap one to choose a portion.</span>
+        <div class="food-chips"><span>Mercimek çorbası</span><span data-i18n="co.f2">Chicken skewers</span><span data-i18n="co.f3">Oats</span></div>
+      </div>
+      <div class="bubble me" data-i18n="co.q2">Add 250 ml water</div>
+      <div class="bubble bot reply ok"><span data-i18n="co.r2">Added. 1,750 ml today, 70% of your target.</span><i class="mini-glass"><i></i></i></div>
+    </div>
+    <div class="coach-copy" data-reveal>
+      <p class="eyebrow" data-i18n="co.eyebrow">Coach</p>
+      <h2 id="coach-title" data-i18n="co.title">Stuck? Ask the Coach.</h2>
+      <p class="sec-lede" data-i18n="co.lede">The Coach sums up how your day's going and answers your questions using your own data. You can log water and food without leaving the chat. Answers are put together on your phone.</p>
+    </div>
+  </div>
+</section>
+
 <!-- HOW: pinned showcase -->
 <section class="how" id="how" aria-labelledby="how-title">
   <div class="showcase">
@@ -363,74 +431,6 @@
       <li><i class="tk-dot"></i><b data-i18n="su.7t">Food and health</b><span data-i18n="su.7p">Foods you don't eat, plus an optional quick health check.</span></li>
       <li><i class="tk-dot"></i><b data-i18n="su.8t">Summary</b><span data-i18n="su.8p">Your daily target and how it was worked out, line by line.</span></li>
     </ol>
-  </div>
-</section>
-
-<!-- AI COMMENTARY -->
-<section class="ai" id="ai" aria-labelledby="ai-title">
-  <div class="ai-glow" aria-hidden="true"></div>
-  <div class="wrap ai-inner">
-    <div class="ai-copy" data-reveal>
-      <p class="eyebrow" data-i18n="ai.eyebrow">AI analysis</p>
-      <h2 id="ai-title" data-i18n="ai.title">The AI tells you two things: what's affecting you and what to do about it.</h2>
-      <p class="sec-lede" data-i18n="ai.lede">Every comment tells you what's affecting your form most and what to focus on over the next 1–3 days. “How your week is going” in the Calendar sums up your week the same way.</p>
-      <ul class="ai-list">
-        <li data-i18n="ai.l1">It doesn't do the math itself; it explains the score and plan your phone already worked out.</li>
-        <li data-i18n="ai.l2">It comments on your form, explains why your plan looks the way it does and estimates foods that aren't in the database.</li>
-        <li data-i18n="ai.l3">Everything it writes is safety-checked before you see it. If something health-related comes up, it points you to a doctor.</li>
-      </ul>
-      <div class="ai-tiers">
-        <span class="tier free" data-i18n="ai.free">On-phone comments · free</span>
-        <span class="tier pro" data-i18n="ai.pro">Detailed AI comments · optional, Premium</span>
-      </div>
-    </div>
-
-    <div class="ai-card" aria-hidden="true">
-      <div class="ai-head"><span class="spark-ico">✦</span><b data-i18n="ai.card">AI commentary</b><em data-i18n="hero.sample">Sample data</em></div>
-      <p class="ai-quote"><span class="typed-text" data-i18n="ai.sample">You've slept less than usual for three days. Take it easy before you add more training.</span></p>
-      <div class="drivers">
-        <div class="drv hot"><span data-i18n="s3.c1">Sleep</span><i style="--w:86%"></i></div>
-        <div class="drv"><span data-i18n="s3.c2">Fatigue</span><i style="--w:52%"></i></div>
-        <div class="drv"><span data-i18n="ai.load">Training load</span><i style="--w:34%"></i></div>
-      </div>
-      <div class="ai-points">
-        <div class="pt"><span class="pt-n">1</span><div><b data-i18n="ai.p1t">What affects it?</b><p data-i18n="ai.p1v">Sleep — the biggest driver</p></div></div>
-        <div class="pt"><span class="pt-n">2</span><div><b data-i18n="ai.p2t">What to do?</b><p data-i18n="ai.p2v">Next 1–3 days: mobility, lighter training</p></div></div>
-      </div>
-      <div class="ai-week">
-        <b data-i18n="ai.week">How your week is going</b>
-        <p data-i18n="ai.weekSample">3 workouts and 1 easy day this week; things ease off before Saturday's match.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COACH -->
-<section class="coach" id="coach" aria-labelledby="coach-title">
-  <div class="chip-rain" aria-hidden="true">
-    <div class="cr-row" data-dir="-1"><div class="cr-track">
-      <span data-i18n="ch.1">How many calories do I have left today?</span><span data-i18n="ch.2">How’s my form, should I train today?</span><span data-i18n="ch.3">What’s my next session?</span><span data-i18n="ch.4">How much water have I had today?</span><span data-i18n="ch.5">How is my week going?</span>
-    </div></div>
-    <div class="cr-row" data-dir="1"><div class="cr-track">
-      <span data-i18n="ch.6">What should I eat now?</span><span data-i18n="ch.7">How did I sleep?</span><span data-i18n="ch.8">How are my macros today?</span><span data-i18n="ch.9">How is my weight trending?</span><span data-i18n="ch.10">Which supplements suit me?</span>
-    </div></div>
-  </div>
-  <div class="wrap coach-inner">
-    <div class="chat" aria-hidden="true">
-      <div class="chat-top"><span class="dot-live"></span><b data-i18n="co.card">Coach</b><em data-i18n="co.where">Home ▸ top right</em></div>
-      <div class="bubble me" data-i18n="ch.6">What should I eat now?</div>
-      <div class="bubble bot typing"><i></i><i></i><i></i></div>
-      <div class="bubble bot reply"><span data-i18n="co.reply">Here are a few foods that fit today’s training; tap one to choose a portion.</span>
-        <div class="food-chips"><span>Mercimek çorbası</span><span data-i18n="co.f2">Chicken skewers</span><span data-i18n="co.f3">Oats</span></div>
-      </div>
-      <div class="bubble me" data-i18n="co.q2">Add 250 ml water</div>
-      <div class="bubble bot reply ok"><span data-i18n="co.r2">Added. 1,750 ml today, 70% of your target.</span><i class="mini-glass"><i></i></i></div>
-    </div>
-    <div class="coach-copy" data-reveal>
-      <p class="eyebrow" data-i18n="co.eyebrow">Coach</p>
-      <h2 id="coach-title" data-i18n="co.title">Stuck? Ask the Coach.</h2>
-      <p class="sec-lede" data-i18n="co.lede">The Coach sums up how your day's going and answers your questions using your own data. You can log water and food without leaving the chat. Answers are put together on your phone.</p>
-    </div>
   </div>
 </section>
 
