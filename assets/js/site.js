@@ -1,6 +1,5 @@
 /* Motion layer. The page is complete without it: the CSS default is the final state,
-   and this script only animates toward it. Skipped entirely under reduced motion
-   or if GSAP failed to load. */
+   and this script only animates toward it. Skipped if GSAP failed to load. */
 (function () {
   var html = document.documentElement;
   var nav = document.querySelector('.nav');
@@ -25,7 +24,6 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ?motion=1 forces motion for testing on machines with Reduce Motion turned on.
   // Session → calorie target calculator. Same formula as the app's ExerciseEnergy:
   // kcal = (baseMET × RPE factor − 1) × kg × hours, RPE factor = 0.6 + 0.08 × RPE (METTable).
   var calc = document.querySelector('.calc');
@@ -59,8 +57,9 @@
     document.addEventListener('fw:lang', updateCalc);
   }
 
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches && !/[?&]motion=1\b/.test(location.search);
-  if (reduce || !window.gsap || !window.ScrollTrigger) return;
+  // Product decision (2026-10-08): full motion for everyone; the OS "Reduce Motion" setting is
+  // not honoured. The page still works without GSAP (CSS default is the final state).
+  if (!window.gsap || !window.ScrollTrigger) return;
 
   var gsap = window.gsap, ST = window.ScrollTrigger;
   gsap.registerPlugin(ST);

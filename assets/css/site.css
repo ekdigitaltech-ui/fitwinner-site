@@ -231,7 +231,7 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
 .sec-head { padding: 120px 0 40px; max-width: 760px; }
 .sec-head h2, .closer h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; letter-spacing: -.04em; }
 
-/* ---------- showcase (static layout = no-JS / reduced motion) ---------- */
+/* ---------- showcase (static layout = no-JS / GSAP failed) ---------- */
 .showcase-inner { display: block; }
 .sc-phone { display: none; }
 .sc-steps { display: grid; gap: 28px; padding-bottom: 80px; }
@@ -375,8 +375,3 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
   .o-core { display: none; }
 }
 
-/* ---------- reduced motion ---------- */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-}
