@@ -16,6 +16,7 @@
   --brand-1: #2abda3;
   --brand-2: #0e8eef;
   --brand: linear-gradient(120deg, var(--brand-1), var(--brand-2));
+  --logo-yellow: #fdbd5a;
 
   --blue: #0a84ff;
   --mint: #63e6e2;
@@ -68,7 +69,7 @@ p { margin: 0; }
 .nav.scrolled { background: rgba(5, 7, 10, .72); backdrop-filter: saturate(160%) blur(18px); -webkit-backdrop-filter: saturate(160%) blur(18px); border-color: var(--line); }
 .nav-inner { max-width: var(--wrap); margin: 0 auto; padding: 14px var(--gutter); display: flex; align-items: center; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 19px; letter-spacing: -.01em; }
-.brand b { font-weight: 700; background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.brand b { font-weight: 700; color: var(--logo-yellow); } /* matches "Winner" in the app icon */
 .brand-mark { width: 32px; height: 32px; border-radius: 8px; }
 .nav-links { display: flex; gap: 26px; margin-left: auto; }
 .nav-links a { text-decoration: none; color: var(--muted); font-size: 15px; transition: color .2s; }
@@ -222,7 +223,7 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
 .nlist .n { margin-bottom: 8px; transform-origin: top center; }
 .lock { overflow: hidden; }
 .n { display: grid; grid-template-columns: 32px 1fr; gap: 10px; align-items: start; padding: 11px 12px; border-radius: 18px; background: rgba(40, 44, 52, .62); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); font-size: 13px; }
-.n-ico { width: 32px; height: 32px; border-radius: 8px; background: url(../img/favicon-64.png) center / cover; box-shadow: inset 0 0 0 2px var(--c); }
+.n-ico { width: 32px; height: 32px; border-radius: 8px; background: url(../img/favicon-64.png?v=y1) center / cover; box-shadow: inset 0 0 0 2px var(--c); }
 .n-h { display: flex; justify-content: space-between; gap: 8px; }
 .n-h b { font-weight: 600; }
 .n-h time { color: rgba(255, 255, 255, .55); font-size: 12px; white-space: nowrap; }
