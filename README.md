@@ -15,4 +15,4 @@ App Store'a çıkınca: "Yakında App Store'da" yerlerini Apple'ın resmi rozeti
 ## İngilizce sayfa (/en/)
 `en/index.html` elle düzenlenmez; `index.html` ya da `assets/js/i18n.js` değişince yeniden üret:
 `node tools/build-en.mjs`. Sayfa İngilizce metni HTML'de taşır (önizleme botları JS çalıştırmaz)
-ve `assets/img/og-en-1200x630.png` paylaşım görselini kullanır. İngilizce paylaşımlarda https://fitwinner.app/en/ linkini kullan.
+ve `assets/img/og-en-1200x630.jpg` paylaşım görselini kullanır. İngilizce paylaşımlarda https://fitwinner.app/en/ linkini kullan.

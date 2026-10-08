@@ -1,5 +1,5 @@
 // Generates en/index.html from index.html: English text baked into the HTML (crawlers and
-// link-preview bots don't run JS), English meta/OG tags and og-en-1200x630.png, and asset paths one
+// link-preview bots don't run JS), English meta/OG tags and og-en-1200x630.jpg, and asset paths one
 // level up. Run after editing index.html or assets/js/i18n.js:  node tools/build-en.mjs
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import vm from 'node:vm';
@@ -43,7 +43,7 @@ html = html
   .replace(/(<meta property="og:description" content=")[^"]*/, `$1${attr(head.ogDesc)}`)
   .replace(/(<meta name="twitter:description" content=")[^"]*/, `$1${attr(head.ogDesc)}`)
   .replace(/(<meta property="og:image:alt" content=")[^"]*/, `$1${attr(head.ogAlt)}`)
-  .replace(/assets\/img\/og-tr-1200x630\.png/g, 'assets/img/og-en-1200x630.png')
+  .replace(/assets\/img\/og-tr-1200x630\.jpg/g, 'assets/img/og-en-1200x630.jpg')
   .replace(/(href|src)="assets\//g, '$1="../assets/');
 
 writeFileSync(root + 'en/index.html'.replace(/^/, ''), html, { flag: 'w' }, mkdirSync(root + 'en', { recursive: true }));
