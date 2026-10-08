@@ -157,7 +157,12 @@
     document.dispatchEvent(new CustomEvent('fw:lang', { detail: lang }));
   }
 
+  // /en/ is a separate, pre-translated page (so link previews can be English); it pins its
+  // language, and switching to Turkish goes to the Turkish page.
+  var pinned = document.documentElement.getAttribute('data-lang');
+
   function initial() {
+    if (pinned) return pinned;
     var q = new URLSearchParams(location.search).get('lang');
     if (q === 'en' || q === 'tr') return q;
     var langs = navigator.languages || [navigator.language || 'tr'];
@@ -167,6 +172,7 @@
   window.FWI18n = {
     lang: function () { return current; },
     set: function (lang) {
+      if (pinned && lang !== pinned) { location.href = lang === 'tr' ? '/?lang=tr' : '/en/'; return; }
       apply(lang);
       var url = new URL(location.href);
       url.searchParams.set('lang', lang);

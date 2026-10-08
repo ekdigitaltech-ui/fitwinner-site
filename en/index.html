@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FitWinner — Calories, training and recovery</title>
+<meta name="description" content="FitWinner works out your daily calorie target, training plan and form score from your own data, right on your phone. For iPhone and Apple Watch. Coming soon to the App Store.">
+<meta name="theme-color" content="#05070a">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://fitwinner.app/en/">
+<link rel="alternate" hreflang="tr" href="https://fitwinner.app/">
+<link rel="alternate" hreflang="en" href="https://fitwinner.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://fitwinner.app/">
+<link rel="icon" type="image/png" href="../assets/img/favicon-64.png?v=y1">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png?v=y1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FitWinner">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:url" content="https://fitwinner.app/en/">
+<meta property="og:title" content="FitWinner — Calories, training and recovery">
+<meta property="og:description" content="Your calorie target, macros and form score, worked out on your phone from your own data. For iPhone and Apple Watch. Coming soon to the App Store.">
+<meta property="og:image" content="https://fitwinner.app/assets/img/og-en.png?v=e1">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FitWinner: Calories, training and recovery. In one place. A phone showing the daily calorie target, form score and calories cards.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FitWinner — Calories, training and recovery">
+<meta name="twitter:description" content="Your calorie target, macros and form score, worked out on your phone from your own data. For iPhone and Apple Watch. Coming soon to the App Store.">
+<meta name="twitter:image" content="https://fitwinner.app/assets/img/og-en.png?v=e1">
+<link rel="stylesheet" href="../assets/css/site.css?v=20261008s">
+<script>document.documentElement.classList.add('js')</script>
+<script src="../assets/vendor/gsap.min.js" defer></script>
+<script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../assets/js/i18n.js?v=20261008s" defer></script>
+<script src="../assets/js/site.js?v=20261008s" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="FitWinner">
+      <img class="brand-mark" src="../assets/img/favicon-64.png?v=y1" width="32" height="32" alt="">
+      <span>Fit<b>Winner</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Sayfa">
+      <a href="#sports" data-i18n="nav.sports">Sports</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="nav-end">
+      <a class="ig" href="https://www.instagram.com/fitwinner.app/" target="_blank" rel="noopener" aria-label="Instagram: @fitwinner.app"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <span class="pill pill-soon" data-i18n="soon">Coming soon to the App Store</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow" data-anim="intro" data-i18n="hero.eyebrow">For iPhone and Apple Watch</p>
+      <h1 id="hero-title" class="hero-title" data-anim="intro">
+        <span class="line" data-i18n="hero.t1">Calories, training</span>
+        <span class="line" data-i18n="hero.t2">and recovery.</span>
+        <span class="line grad" data-i18n="hero.t3">In one place.</span>
+      </h1>
+      <p class="lede" data-anim="intro" data-i18n="hero.lede">FitWinner works out your daily calorie target, training plan and form score from your own data, right on your phone. No guesswork, just science-based calculations.</p>
+      <div class="hero-cta" data-anim="intro">
+        <span class="btn btn-primary" aria-disabled="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3z"/></svg>
+          <span data-i18n="soon">Coming soon to the App Store</span>
+        </span>
+        <a class="btn btn-ig" href="https://www.instagram.com/fitwinner.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg><span data-i18n="igbtn">Follow on Instagram</span></a>
+      </div>
+      <ul class="hero-facts" data-anim="intro">
+        <li data-i18n="hero.f1">No account</li>
+        <li data-i18n="hero.f2">Works offline</li>
+        <li data-i18n="hero.f3">Your data stays on your phone</li>
+      </ul>
+    </div>
+
+    <div class="hero-stage" aria-hidden="true">
+      <div class="stage-tilt">
+        <div class="ring-deco" data-depth="-0.15"></div>
+        <div class="phone hero-phone" data-depth="0.08">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="scr scr-home">
+              <div class="scr-top"><span>09:41</span><b>FitWinner</b><span class="dots">●●●</span></div>
+              <div class="w">
+                <div class="w-h" style="--c:var(--blue)"><span class="ico">●</span><span data-i18n="m.target">Daily target</span></div>
+                <div class="big"><span data-count="2130" data-format="int">2,130</span><small>kcal</small></div>
+                <div class="macros">
+                  <div><span data-i18n="m.protein">Protein</span><b>132 g</b><i style="--w:78%;--c:var(--blue)"></i></div>
+                  <div><span data-i18n="m.carbs">Carbs</span><b>240 g</b><i style="--w:55%;--c:var(--orange)"></i></div>
+                  <div><span data-i18n="m.fat">Fat</span><b>68 g</b><i style="--w:62%;--c:var(--pink)"></i></div>
+                </div>
+              </div>
+              <div class="w w-row">
+                <div>
+                  <div class="w-h" style="--c:var(--mint)"><span class="ico">●</span><span data-i18n="m.form">Form</span></div>
+                  <div class="mid"><span data-count="77" data-format="int">77</span><small data-i18n="m.good">good</small></div>
+                </div>
+                <svg class="spark" viewBox="0 0 120 40"><path d="M2 30 L18 26 L32 28 L46 18 L60 22 L74 14 L88 17 L102 9 L118 11" fill="none" stroke="var(--mint)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg>
+              </div>
+              <div class="w">
+                <div class="w-h" style="--c:var(--orange)"><span class="ico">●</span><span data-i18n="m.calories">Calories</span></div>
+                <div class="mid"><span data-count="1262" data-format="int">1,262</span><small>/ <span data-count="2130" data-static>2,130</span> kcal</small></div>
+                <div class="bar"><i style="--w:59%;--c:var(--orange)"></i></div>
+              </div>
+              <div class="w">
+                <div class="w-h" style="--c:var(--indigo)"><span class="ico">●</span><span data-i18n="m.calendar">Calendar</span></div>
+                <p class="w-p" data-i18n="m.week">4 sessions planned this week · match on Saturday</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card fc-1" data-depth="0.35">
+          <span class="fc-k" data-i18n="fc.left">Left</span>
+          <span class="fc-v"><span data-count="868" data-format="int">868</span> kcal</span>
+        </div>
+        <div class="float-card fc-2" data-depth="0.55">
+          <span class="fc-k" data-i18n="fc.hrv">HRV · 7 days</span>
+          <svg viewBox="0 0 100 28" class="fc-spark"><path d="M2 20 L14 16 L26 18 L38 10 L50 13 L62 7 L74 9 L86 5 L98 6" fill="none" stroke="var(--pink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="float-card fc-3" data-depth="0.25">
+          <span class="fc-k" data-i18n="fc.next">Up next</span>
+          <span class="fc-v small" data-i18n="fc.session">Mobility · 30 min</span>
+        </div>
+      </div>
+      <p class="stage-note" data-i18n="hero.sample">Sample data</p>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#how" aria-hidden="true" tabindex="-1"><span></span></a>
+</section>
+
+<!-- SPORTS: marquee + per-session energy + per-session notifications -->
+<section class="sports" id="sports" aria-labelledby="sports-title">
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-row" data-dir="-1">
+      <div class="mq-track">
+        <span class="c-y" data-i18n="sp.football">Football</span><span class="c-o" data-i18n="sp.running">Running</span><span class="c-g" data-i18n="sp.basketball">Basketball</span><span class="c-w" data-i18n="sp.swimming">Swimming</span><span class="c-o" data-i18n="sp.tennis">Tennis</span><span class="c-y" data-i18n="sp.cycling">Cycling</span><span class="c-g" data-i18n="sp.boxing">Boxing</span><span class="c-o" data-i18n="sp.volleyball">Volleyball</span><span class="c-w" data-i18n="sp.crossfit">CrossFit</span><span class="c-y" data-i18n="sp.handball">Handball</span><span class="c-g" data-i18n="sp.climbing">Climbing</span>
+      </div>
+    </div>
+    <div class="mq-row alt" data-dir="1">
+      <div class="mq-track">
+        <span class="c-g" data-i18n="sp.fitness">Gym</span><span class="c-y" data-i18n="sp.yoga">Yoga</span><span class="c-o" data-i18n="sp.hiit">HIIT</span><span class="c-w" data-i18n="sp.rowing">Rowing</span><span class="c-y" data-i18n="sp.pilates">Pilates</span><span class="c-o" data-i18n="sp.martial">Martial arts</span><span class="c-g" data-i18n="sp.hiking">Hiking</span><span class="c-y" data-i18n="sp.dance">Dance</span><span class="c-w" data-i18n="sp.badminton">Badminton</span><span class="c-o" data-i18n="sp.skiing">Skiing</span><span class="c-w" data-i18n="sp.mobility">Mobility</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="sec-head sports-head" data-reveal>
+      <p class="eyebrow" data-i18n="sx.eyebrow">From football to yoga</p>
+      <h2 id="sports-title" data-i18n="sx.title">Every workout counts toward your daily target.</h2>
+      <p class="sec-lede" data-i18n="sx.lede">Football, running or yoga, it doesn't matter: every workout you do or plan gets added to that day's calorie target. And you get a heads-up before each one.</p>
+    </header>
+
+    <div class="sx-grid">
+      <!-- energy calculator -->
+      <div class="sx-card calc" data-reveal>
+        <h3 data-i18n="cx.t">Workout → calorie target</h3>
+        <p class="sx-p" data-i18n="cx.p">What you do, for how long and how hard you push decides how many calories you burn. If your Apple Watch tracked your heart rate, we use that, and calories your watch already counted never get added twice.</p>
+
+        <div class="chips" role="radiogroup" aria-label="Sport" data-i18n-attr="aria-label:cx.sport">
+          <button type="button" role="radio" aria-checked="true" data-met="8" data-i18n="sp.football">Football</button>
+          <button type="button" role="radio" aria-checked="false" data-met="9" data-i18n="sp.running">Running</button>
+          <button type="button" role="radio" aria-checked="false" data-met="8" data-i18n="sp.cycling">Cycling</button>
+          <button type="button" role="radio" aria-checked="false" data-met="8" data-i18n="sp.swimming">Swimming</button>
+          <button type="button" role="radio" aria-checked="false" data-met="7.5" data-i18n="sp.basketball">Basketball</button>
+          <button type="button" role="radio" aria-checked="false" data-met="8" data-i18n="sp.tennis">Tennis</button>
+          <button type="button" role="radio" aria-checked="false" data-met="9" data-i18n="sp.boxing">Boxing</button>
+          <button type="button" role="radio" aria-checked="false" data-met="5" data-i18n="sp.fitness">Gym</button>
+          <button type="button" role="radio" aria-checked="false" data-met="3" data-i18n="sp.yoga">Yoga</button>
+        </div>
+
+        <div class="sliders">
+          <label><span><span data-i18n="cx.dur">Duration</span> <output id="cx-dur-o">60</output> <span data-i18n="cx.min">min</span></span>
+            <input id="cx-dur" type="range" min="15" max="120" step="15" value="60"></label>
+          <label><span><span data-i18n="cx.rpe">Effort</span> <output id="cx-rpe-o">7</output>/10</span>
+            <input id="cx-rpe" type="range" min="1" max="10" step="1" value="7"></label>
+        </div>
+
+        <div class="cx-out">
+          <div class="cx-session"><span data-i18n="cx.session">This workout</span><b>+<span id="cx-kcal">621</span> kcal</b></div>
+          <div class="cx-stack" aria-hidden="true"><i class="cx-base"></i><i class="cx-add"></i></div>
+          <div class="cx-legend">
+            <span><i class="dot base"></i><span data-i18n="cx.base">Rest-day target</span> <b><span id="cx-base">1.750</span> kcal</b></span>
+            <span><i class="dot add"></i><span data-i18n="cx.today">Today’s target</span> <b><span id="cx-total">2.371</span> kcal</b></span>
+          </div>
+          <p class="cx-note" data-i18n="cx.note">Example: someone who weighs 75 kg. Formula: (MET × effort factor − 1) × weight × hours.</p>
+        </div>
+      </div>
+
+      <!-- notifications -->
+      <div class="sx-card notif" data-reveal>
+        <h3 data-i18n="nx.t">A reminder for every workout</h3>
+        <p class="sx-p" data-i18n="nx.p">Turn on notifications and pick how early you want a heads-up: 30, 60, 90 or 120 minutes before. You'll also get meal reminders around your training time, a nudge to carb-load the night before a match and an electrolyte reminder on hot days. Skip a workout and you won't hear about it; change your plan and the reminders update themselves.</p>
+
+        <div class="lock" aria-hidden="true">
+          <div class="lock-clock"><span class="lock-day" data-i18n="nx.day">Friday</span><b class="lock-time">19:00</b></div>
+          <div class="nlist">
+            <div class="n" data-t="19:00" style="--c:var(--pink)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.5t">Match tomorrow</b><time>19:00</time></p><p data-i18n="nx.5p">Match tomorrow: add more carbs to dinner tonight.</p></div></div>
+            <div class="n" data-t="19:00" style="--c:var(--mint)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.4t">Recovery meal</b><time>19:00</time></p><p data-i18n="nx.4p">Workout done. Refuel with some protein and carbs.</p></div></div>
+            <div class="n" data-t="17:00" style="--c:var(--blue)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.3t">Session in 1 hour</b><time>17:00</time></p><p data-i18n="nx.3p">Prep · light · 30 min</p></div></div>
+            <div class="n" data-t="16:00" style="--c:var(--orange)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.1t">Pre-training meal</b><time>16:00</time></p><p data-i18n="nx.1p">Prep session at 18:00. Good time for a light snack.</p></div></div>
+          </div>
+        </div>
+        <p class="cx-note" data-i18n="nx.note">Sample notifications. They're all set up right on your phone; nothing gets pushed from a server.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW: pinned showcase -->
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="showcase">
+    <div class="wrap showcase-inner">
+      <div class="sc-phone" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen sc-screens"></div>
+        </div>
+        <div class="sc-progress"><i></i></div>
+        <p class="stage-note static" data-i18n="hero.sample">Sample data</p>
+      </div>
+      <div class="sc-left">
+      <header class="sec-head how-head">
+        <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
+        <h2 id="how-title" data-i18n="how.title">See where every number comes from.</h2>
+      </header>
+      <div class="sc-nav" aria-hidden="true">
+        <button type="button" tabindex="-1"><b>01</b><span data-i18n="s1.t">Calories that fit your day</span></button>
+        <button type="button" tabindex="-1"><b>02</b><span data-i18n="s2.nav">Food log</span></button>
+        <button type="button" tabindex="-1"><b>03</b><span data-i18n="s3.nav">Form score</span></button>
+        <button type="button" tabindex="-1"><b>04</b><span data-i18n="s4.nav">Weekly plan</span></button>
+      </div>
+      <div class="sc-steps">
+
+        <article class="step" data-accent="orange">
+          <div class="step-text">
+            <span class="step-n">01</span>
+            <h3 data-i18n="s1.t">Calories that fit your day</h3>
+            <p data-i18n="s1.p">Your target is based on your age, weight, job and how much you train. Calories and workouts from your Apple Watch get added automatically, and you can see the math line by line.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-cal">
+              <div class="scr-title" data-i18n="s1.scr">Energy breakdown</div>
+              <div class="rows">
+                <div class="r"><span data-i18n="s1.bmr">Basal metabolism</span><b><span data-count="1640" data-format="int">1,640</span> kcal</b></div>
+                <div class="r"><span data-i18n="s1.job">Job and daily movement</span><b>+<span data-count="410" data-format="int">410</span> kcal</b></div>
+                <div class="r"><span data-i18n="s1.train">Planned training</span><b>+<span data-count="380" data-format="int">380</span> kcal</b></div>
+                <div class="r"><span data-i18n="s1.goal">Goal adjustment</span><b>−<span data-count="300" data-format="int">300</span> kcal</b></div>
+                <div class="r total"><span data-i18n="m.target">Daily target</span><b><span data-count="2130" data-format="int">2,130</span> kcal</b></div>
+              </div>
+              <div class="donut">
+                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="48" class="d-bg"/><circle cx="60" cy="60" r="48" class="d-fg" style="--c:var(--orange)" pathLength="100" stroke-dasharray="59 100"/></svg>
+                <div class="donut-c"><b data-count="868" data-format="int">868</b><span data-i18n="fc.left">Left</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step" data-accent="green">
+          <div class="step-text">
+            <span class="step-n">02</span>
+            <h3 data-i18n="s2.t">Food logging that gets Turkish cooking</h3>
+            <p data-i18n="s2.p">Search thousands of local and international foods and pick your portion. Add a recipe's ingredients and the calories and macros add up on their own. Anything that's an estimate is labeled as one.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-food">
+              <div class="scr-title" data-i18n="s2.scr">Today</div>
+              <div class="search"><span>⌕</span><span class="typed" data-i18n="s2.q">lentil</span><i class="caret"></i></div>
+              <div class="rows">
+                <div class="r food"><span>Mercimek çorbası<small data-i18n="s2.p1">1 bowl · 250 g</small></span><b>178 kcal</b></div>
+                <div class="r food"><span>Izgara köfte<small data-i18n="s2.p2">4 pieces · 120 g</small></span><b>286 kcal</b></div>
+                <div class="r food"><span>Bulgur pilavı<small data-i18n="s2.p3">1 serving · 150 g</small></span><b>231 kcal</b></div>
+                <div class="r food"><span>Ayran<small data-i18n="s2.p4">1 glass · 200 ml</small></span><b>76 kcal</b></div>
+              </div>
+              <div class="macro-stack"><i style="--w:30%;--c:var(--blue)"></i><i style="--w:45%;--c:var(--orange)"></i><i style="--w:25%;--c:var(--pink)"></i></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step" data-accent="mint">
+          <div class="step-text">
+            <span class="step-n">03</span>
+            <h3 data-i18n="s3.t">Recovery and form score</h3>
+            <p data-i18n="s3.p">Check in daily on your sleep, fatigue and soreness, and if your Apple Watch is connected, your resting heart rate and HRV come in too. You get a daily form score compared with your own last 28 days. Feeling run down? It'll suggest going easier.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-form">
+              <div class="scr-title" data-i18n="m.form">Form</div>
+              <div class="gauge">
+                <svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="56" class="d-bg"/><circle cx="70" cy="70" r="56" class="d-fg" style="--c:var(--mint)" pathLength="100" stroke-dasharray="77 100"/></svg>
+                <div class="gauge-c"><b data-count="77" data-format="int">77</b><span data-i18n="s3.band">Good · steady</span></div>
+              </div>
+              <div class="comp">
+                <div><span data-i18n="s3.c1">Sleep</span><i style="--w:72%"></i></div>
+                <div><span data-i18n="s3.c2">Fatigue</span><i style="--w:58%"></i></div>
+                <div><span data-i18n="s3.c3">Soreness</span><i style="--w:44%"></i></div>
+                <div><span>HRV</span><i style="--w:81%"></i></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step" data-accent="indigo">
+          <div class="step-text">
+            <span class="step-n">04</span>
+            <h3 data-i18n="s4.t">A weekly plan, ready for match day</h3>
+            <p data-i18n="s4.p">Your training calendar, weekly plan and training load, all in one place. The days before a match or race are marked. Food ideas change with that day's workout and the calories you have left.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-plan">
+              <div class="scr-title" data-i18n="s4.scr">This week</div>
+              <div class="days">
+                <div class="d"><b data-i18n="s4.d1">Mon</b><span data-i18n="s4.x1">Strength</span><em>60′</em></div>
+                <div class="d"><b data-i18n="s4.d2">Tue</b><span data-i18n="s4.x2">Sport-specific</span><em>75′</em></div>
+                <div class="d rest"><b data-i18n="s4.d3">Wed</b><span data-i18n="s4.x3">Active recovery</span><em>30′</em></div>
+                <div class="d"><b data-i18n="s4.d4">Thu</b><span data-i18n="s4.x4">Plyometric</span><em>45′</em></div>
+                <div class="d taper"><b data-i18n="s4.d5">Fri</b><span data-i18n="s4.x5">Taper · light</span><em>30′</em></div>
+                <div class="d match"><b data-i18n="s4.d6">Sat</b><span data-i18n="s4.x6">Match</span><em>⚑</em></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP: onboarding steps, scroll-drawn track -->
+<section class="setup" id="setup" aria-labelledby="setup-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="eyebrow" data-i18n="su.eyebrow">Quick setup</p>
+      <h2 id="setup-title" data-i18n="su.title">Eight quick steps. No account needed.</h2>
+      <p class="sec-lede" data-i18n="su.lede">Everything you enter during setup goes into your target. At the end, the summary shows you exactly how it was worked out.</p>
+    </header>
+    <ol class="track">
+      <li><i class="tk-dot"></i><b data-i18n="su.1t">Basics</b><span data-i18n="su.1p">Your birth year and biological sex. The app is for people 18 and up.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.2t">Privacy and permissions</b><span data-i18n="su.2p">Accept the terms, then decide separately whether to allow health data and AI, or skip both. You can change any of it later in Profile.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.3t">Body</b><span data-i18n="su.3p">Your height and weight, in kg/cm or lb/ft-in.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.4t">Goal</b><span data-i18n="su.4p">Lose fat, maintain, build muscle, perform better or just stay healthy. Weight loss tops out at 1% a week.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.5t">Job</b><span data-i18n="su.5p">Which days and hours do you work? Sitting at a desk, working in the field or on a building site changes how much energy you use.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.6t">Training</b><span data-i18n="su.6p">Which sports do you play, how often and for how long? Your weekly plan is built from this.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.7t">Food and health</b><span data-i18n="su.7p">Foods you don't eat, plus an optional quick health check.</span></li>
+      <li><i class="tk-dot"></i><b data-i18n="su.8t">Summary</b><span data-i18n="su.8p">Your daily target and how it was worked out, line by line.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- AI COMMENTARY -->
+<section class="ai" id="ai" aria-labelledby="ai-title">
+  <div class="ai-glow" aria-hidden="true"></div>
+  <div class="wrap ai-inner">
+    <div class="ai-copy" data-reveal>
+      <p class="eyebrow" data-i18n="ai.eyebrow">AI analysis</p>
+      <h2 id="ai-title" data-i18n="ai.title">The AI tells you two things: what's affecting you and what to do about it.</h2>
+      <p class="sec-lede" data-i18n="ai.lede">Every comment tells you what's affecting your form most and what to focus on over the next 1–3 days. “How your week is going” in the Calendar sums up your week the same way.</p>
+      <ul class="ai-list">
+        <li data-i18n="ai.l1">It doesn't do the math itself; it explains the score and plan your phone already worked out.</li>
+        <li data-i18n="ai.l2">It comments on your form, explains why your plan looks the way it does and estimates foods that aren't in the database.</li>
+        <li data-i18n="ai.l3">Everything it writes is safety-checked before you see it. If something health-related comes up, it points you to a doctor.</li>
+      </ul>
+      <div class="ai-tiers">
+        <span class="tier free" data-i18n="ai.free">On-phone comments · free</span>
+        <span class="tier pro" data-i18n="ai.pro">Detailed AI comments · optional, Premium</span>
+      </div>
+    </div>
+
+    <div class="ai-card" aria-hidden="true">
+      <div class="ai-head"><span class="spark-ico">✦</span><b data-i18n="ai.card">AI commentary</b><em data-i18n="hero.sample">Sample data</em></div>
+      <p class="ai-quote"><span class="typed-text" data-i18n="ai.sample">You've slept less than usual for three days. Take it easy before you add more training.</span></p>
+      <div class="drivers">
+        <div class="drv hot"><span data-i18n="s3.c1">Sleep</span><i style="--w:86%"></i></div>
+        <div class="drv"><span data-i18n="s3.c2">Fatigue</span><i style="--w:52%"></i></div>
+        <div class="drv"><span data-i18n="ai.load">Training load</span><i style="--w:34%"></i></div>
+      </div>
+      <div class="ai-points">
+        <div class="pt"><span class="pt-n">1</span><div><b data-i18n="ai.p1t">What affects it?</b><p data-i18n="ai.p1v">Sleep — the biggest driver</p></div></div>
+        <div class="pt"><span class="pt-n">2</span><div><b data-i18n="ai.p2t">What to do?</b><p data-i18n="ai.p2v">Next 1–3 days: mobility, lighter training</p></div></div>
+      </div>
+      <div class="ai-week">
+        <b data-i18n="ai.week">How your week is going</b>
+        <p data-i18n="ai.weekSample">3 workouts and 1 easy day this week; things ease off before Saturday's match.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH -->
+<section class="coach" id="coach" aria-labelledby="coach-title">
+  <div class="chip-rain" aria-hidden="true">
+    <div class="cr-row" data-dir="-1"><div class="cr-track">
+      <span data-i18n="ch.1">How many calories do I have left today?</span><span data-i18n="ch.2">How’s my form, should I train today?</span><span data-i18n="ch.3">What’s my next session?</span><span data-i18n="ch.4">How much water have I had today?</span><span data-i18n="ch.5">How is my week going?</span>
+    </div></div>
+    <div class="cr-row" data-dir="1"><div class="cr-track">
+      <span data-i18n="ch.6">What should I eat now?</span><span data-i18n="ch.7">How did I sleep?</span><span data-i18n="ch.8">How are my macros today?</span><span data-i18n="ch.9">How is my weight trending?</span><span data-i18n="ch.10">Which supplements suit me?</span>
+    </div></div>
+  </div>
+  <div class="wrap coach-inner">
+    <div class="chat" aria-hidden="true">
+      <div class="chat-top"><span class="dot-live"></span><b data-i18n="co.card">Coach</b><em data-i18n="co.where">Home ▸ top right</em></div>
+      <div class="bubble me" data-i18n="ch.6">What should I eat now?</div>
+      <div class="bubble bot typing"><i></i><i></i><i></i></div>
+      <div class="bubble bot reply"><span data-i18n="co.reply">Here are a few foods that fit today’s training; tap one to choose a portion.</span>
+        <div class="food-chips"><span>Mercimek çorbası</span><span data-i18n="co.f2">Chicken skewers</span><span data-i18n="co.f3">Oats</span></div>
+      </div>
+      <div class="bubble me" data-i18n="co.q2">Add 250 ml water</div>
+      <div class="bubble bot reply ok"><span data-i18n="co.r2">Added. 1,750 ml today, 70% of your target.</span><i class="mini-glass"><i></i></i></div>
+    </div>
+    <div class="coach-copy" data-reveal>
+      <p class="eyebrow" data-i18n="co.eyebrow">Coach</p>
+      <h2 id="coach-title" data-i18n="co.title">Stuck? Ask the Coach.</h2>
+      <p class="sec-lede" data-i18n="co.lede">The Coach sums up how your day's going and answers your questions using your own data. You can log water and food without leaving the chat. Answers are put together on your phone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MORE: bento -->
+<section class="more" id="more" aria-labelledby="more-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="eyebrow" data-i18n="mo.eyebrow">And more</p>
+      <h2 id="more-title" data-i18n="mo.title">The rest of your day, sorted.</h2>
+    </header>
+    <div class="bento">
+
+      <article class="bx bx-meals" data-reveal>
+        <div class="bx-vis meals-vis" aria-hidden="true">
+          <div class="mcard"><b>Mercimek çorbası</b><span>178 kcal</span></div>
+          <div class="mcard"><b data-i18n="co.f2">Chicken skewers</b><span>254 kcal</span></div>
+          <div class="mcard"><b data-i18n="mo.meal3">Oats with yogurt</b><span>312 kcal</span></div>
+          <button type="button" class="refresh" tabindex="-1">↻</button>
+        </div>
+        <h3 data-i18n="mo.m.t">Meal ideas that fit your goal</h3>
+        <p data-i18n="mo.m.p">Ideas change with your workout and the calories you have left. They all come from the food database, and nothing you avoid ever shows up. Hit refresh for a new list.</p>
+      </article>
+
+      <article class="bx bx-fluid" data-reveal>
+        <div class="bx-vis fluid-vis" aria-hidden="true">
+          <div class="glass"><i class="water"></i><b><span data-count="1750" data-format="int">1,750</span> ml</b></div>
+          <div class="drinks"><span data-i18n="mo.d1">Water</span><span data-i18n="mo.d2">Tea</span><span data-i18n="mo.d3">Coffee</span><span data-i18n="mo.d4">Ayran</span></div>
+        </div>
+        <h3 data-i18n="mo.f.t">Fluid tracking</h3>
+        <p data-i18n="mo.f.p">Water, tea, coffee, mineral water and drinks with calories. If you have ayran, milk or juice, it goes into your food log too.</p>
+      </article>
+
+      <article class="bx bx-health" data-reveal>
+        <div class="bx-vis health-vis" aria-hidden="true">
+          <div class="hk-core">♥</div>
+          <span class="hk" style="--a:-90deg" data-i18n="mo.h1">Workouts</span>
+          <span class="hk" style="--a:0deg" data-i18n="s3.c1">Sleep</span>
+          <span class="hk" style="--a:90deg" data-i18n="mo.h2">Steps &amp; active energy</span>
+          <span class="hk" style="--a:180deg" data-i18n="mo.h5">Weight</span>
+          <span class="hk" style="--a:-148deg" data-i18n="mo.h4">Heart rate &amp; HRV</span>
+        </div>
+        <h3 data-i18n="mo.h.t">Works with Apple Health</h3>
+        <p data-i18n="mo.h.p">Say yes and your workouts, steps, sleep, heart rate and weight come in automatically. FitWinner only reads them, and you choose what to share, one by one.</p>
+      </article>
+
+      <article class="bx bx-kb" data-reveal>
+        <div class="bx-vis kb-vis" aria-hidden="true">
+          <div class="sup"><b data-i18n="mo.k1">Creatine</b><span class="ev strong" data-i18n="mo.ev1">Strong evidence</span></div>
+          <div class="sup"><b>Omega-3</b><span class="ev mod" data-i18n="mo.ev2">Moderate evidence</span></div>
+          <div class="sup no"><b>BCAA</b><span class="stamp" data-i18n="mo.no">Not needed</span></div>
+        </div>
+        <h3 data-i18n="mo.k.t">Supplements, with the evidence</h3>
+        <p data-i18n="mo.k.p">See how much evidence there is behind each supplement: what actually helps your goal and what you can skip. Anything that doesn't suit your health never gets suggested.</p>
+      </article>
+
+      <article class="bx bx-notif" data-reveal>
+        <div class="bx-vis act-vis" aria-hidden="true">
+          <div class="an"><div><b data-i18n="mo.n1">Football in 1 hour</b><span data-i18n="mo.n1b">Eat something light and drink water.</span></div>
+            <div class="an-act"><span class="done" data-i18n="mo.done">Done</span><span data-i18n="mo.snooze">Snooze</span></div></div>
+          <div class="an small"><div><b data-i18n="mo.n2">Weigh-in time</b><span data-i18n="mo.n2b">In the morning, before breakfast.</span></div></div>
+        </div>
+        <h3 data-i18n="mo.a.t">Tap “Done” in the notification</h3>
+        <p data-i18n="mo.a.p">Tap “Done” on a workout reminder and it's logged and your target updates. “Snooze” pushes it back. Weigh-in reminders follow your plan too.</p>
+      </article>
+
+      <article class="bx bx-prog" data-reveal>
+        <div class="bx-vis prog-vis" aria-hidden="true">
+          <div class="set"><b>Squat</b><span>4 × 8</span></div>
+          <div class="set"><b>Bench press</b><span>4 × 6</span></div>
+          <div class="set"><b data-i18n="mo.p3">Pull-up</b><span>3 × 10</span></div>
+        </div>
+        <h3 data-i18n="mo.p.t">Your own programs</h3>
+        <p data-i18n="mo.p.p">Build your own workouts with sets and reps, and add moves quickly from the exercise list.</p>
+        <span class="tag-pro">Premium</span>
+      </article>
+
+      <article class="bx bx-safe" data-reveal>
+        <div class="bx-vis safe-vis" aria-hidden="true">
+          <div class="shield"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg></div>
+        </div>
+        <div class="safe-txt">
+        <h3 data-i18n="mo.s.t">Free health check in every version</h3>
+        <p data-i18n="mo.s.p">It never diagnoses anything. Your answers just make your goals safer; for example, no calorie deficit if you're pregnant. If needed, it points you to a specialist.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="orbit" aria-hidden="true" data-depth="0.2">
+    <div class="o o1"><i></i></div><div class="o o2"><i></i><i></i></div><div class="o o3"><i></i><i></i><i></i></div>
+    <div class="o-core">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3zm0 10.9h6c-.5 3.9-3 7.3-6 8.3v-8.3H6V6.3l6-2.2v8.8z"/></svg>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal data-i18n="pv.eyebrow">Privacy comes first</p>
+    <h2 id="privacy-title" class="statement" data-words data-i18n="pv.title">The math happens on your phone. No internet needed. Your raw health data never leaves your phone.</h2>
+    <div class="pv-grid">
+      <div class="pv" data-reveal>
+        <h3 data-i18n="pv.a.t">No account needed</h3>
+        <p data-i18n="pv.a.p">You don't need an account to use the app. Your data stays on your phone.</p>
+      </div>
+      <div class="pv" data-reveal>
+        <h3 data-i18n="pv.b.t">Same input, same answer</h3>
+        <p data-i18n="pv.b.p">Your calorie target, macros and form score are worked out by calculations on your phone. Enter the same details and you'll always get the same result.</p>
+      </div>
+      <div class="pv" data-reveal>
+        <h3 data-i18n="pv.c.t">AI only if you say so</h3>
+        <p data-i18n="pv.c.p">Comments are written only if you allow it, from a summary with your name and identity stripped out. Change your mind any time and the comments made from that data are deleted too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <header class="sec-head" data-reveal>
+      <p class="eyebrow" data-i18n="faq.eyebrow">Frequently asked</p>
+      <h2 id="faq-title" data-i18n="faq.title">In short.</h2>
+    </header>
+    <div class="qa" data-reveal>
+      <details>
+        <summary data-i18n="q1">When does it launch?</summary>
+        <p data-i18n="a1">FitWinner is in closed beta right now. We'll announce it here when it hits the App Store.</p>
+      </details>
+      <details>
+        <summary data-i18n="q2">Do I need an Apple Watch?</summary>
+        <p data-i18n="a2">No. Calorie tracking, food logging and your training plan all work without one. Connect Apple Watch or Apple Health and your resting heart rate, HRV and sleep feed into your form score.</p>
+      </details>
+      <details>
+        <summary data-i18n="q3">What does the AI do?</summary>
+        <p data-i18n="a3">Only if you allow it, it writes short notes about your form score and plan. It doesn't do the math; your calorie target, macros and form score come from calculations on your phone.</p>
+      </details>
+      <details>
+        <summary data-i18n="q4">Is it medical advice?</summary>
+        <p data-i18n="a4">No. FitWinner is for people 18 and up. It's not a medical device and it doesn't diagnose or treat anything. If you have a health condition, talk to your doctor about your goals.</p>
+      </details>
+      <details>
+        <summary data-i18n="q5">What languages is it in?</summary>
+        <p data-i18n="a5">The app is available in 11 languages: Turkish, English, French, Dutch, Spanish, Italian, Portuguese, Polish, Greek, Czech and Estonian. This site is in Turkish and English for now.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSER -->
+<section class="closer" aria-labelledby="closer-title">
+  <div class="aurora small" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+  <div class="wrap closer-inner" data-reveal>
+    <img class="closer-icon" src="../assets/img/icon-512.png?v=y1" width="96" height="96" alt="" loading="lazy">
+    <h2 id="closer-title" data-i18n="cl.title">Trust your own data, not guesswork.</h2>
+    <div class="closer-cta">
+      <span class="btn btn-primary" aria-disabled="true"><span data-i18n="soon">Coming soon to the App Store</span></span>
+      <a class="btn btn-ig" href="https://www.instagram.com/fitwinner.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg><span data-i18n="igbtn">Follow on Instagram</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div>
+      <a class="brand" href="#top" aria-label="FitWinner"><span>Fit<b>Winner</b></span></a>
+      <p class="muted">© 2026 EK Digital Technologies OÜ</p>
+    </div>
+    <nav class="foot-links" aria-label="Legal" data-i18n-attr="aria-label:ft.legal">
+      <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/privacy/" data-i18n="ft.privacy">Privacy Policy</a>
+      <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/terms/" data-i18n="ft.terms">Terms of Use</a>
+      <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/kvkk/" data-i18n="ft.kvkk">KVKK Notice</a>
+      <a href="mailto:enis@ekdigital.tech" data-i18n="ft.contact">Contact</a>
+      <a class="ig-foot" href="https://www.instagram.com/fitwinner.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg><span>@fitwinner.app</span></a>
+    </nav>
+  </div>
+  <p class="wrap tm muted" data-i18n="ft.tm">Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. This site doesn't use cookies or analytics.</p>
+</footer>
+</body>
+</html>
