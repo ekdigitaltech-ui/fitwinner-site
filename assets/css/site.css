@@ -182,7 +182,7 @@ p { margin: 0; }
 .mq-row + .mq-row { margin-top: 8px; }
 
 /* ---------- sports ---------- */
-.sports { position: relative; background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; padding-bottom: 120px; }
+.sports { position: relative; background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; overflow: clip; /* clip, not hidden: hidden would break the sticky cards */ padding-bottom: 120px; }
 .sports .marquee { border: 0; padding: 70px 0 0; background: none; }
 .sports-head { padding-top: 70px; }
 .sec-lede { color: var(--muted); font-size: 19px; margin-top: 18px; max-width: 56ch; }
@@ -228,6 +228,9 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
 .n-h b { font-weight: 600; }
 .n-h time { color: rgba(255, 255, 255, .55); font-size: 12px; white-space: nowrap; }
 .n p:not(.n-h) { color: rgba(255, 255, 255, .78); }
+
+.motion .sx-hold { position: relative; }
+.motion .sx-hold > .sx-grid { position: sticky; }
 
 /* ---------- section heads ---------- */
 .sec-head { padding: 120px 0 40px; max-width: 760px; }

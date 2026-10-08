@@ -170,26 +170,54 @@
       scrollTrigger: { trigger: '.marquee', start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
   });
 
-  /* ---- notifications drop in one by one while the lock-screen clock runs ---- */
+  /* ---- notifications: the cards hold still while scrolling brings them in ---- */
   var lock = document.querySelector('.lock');
-  if (lock) {
-    // Like iOS: the newest notification lands on top and nudges the older ones down. The
-    // markup is newest-first, so they arrive in reverse DOM order. The lock screen's height is
-    // frozen at its final size first, so the card and the page never grow while they arrive.
+  var sxGrid = document.querySelector('.sx-grid');
+  if (lock && sxGrid) {
+    // Like iOS: the newest notification lands on top and nudges the older ones down (the
+    // markup is newest-first, so they arrive in reverse DOM order). The cards are sticky inside
+    // a taller box; while they're stuck, scrolling only advances the notifications, so the page
+    // doesn't move on until all of them are in. Scrolling back up plays them out in reverse.
     var clock = lock.querySelector('.lock-time');
     var notifs = gsap.utils.toArray('.lock .n').reverse(); // oldest first = arrival order
-    lock.style.height = lock.offsetHeight + 'px'; // measured while all notifications are still laid out
-    var ntl = gsap.timeline({ paused: true, onComplete: function () { lock.style.height = ''; } });
+    var STEP = 0.9;
+    lock.style.height = lock.offsetHeight + 'px'; // final size, measured while every notification is laid out
+    var ntl = gsap.timeline({ paused: true });
     notifs.forEach(function (n, i) {
-      ntl.add(function () { clock.textContent = n.getAttribute('data-t') || clock.textContent; }, i * 0.9)
-        .fromTo(n, { height: 0, marginBottom: 0, paddingTop: 0, paddingBottom: 0, opacity: 0, scale: 0.9 },
-          { height: 'auto', marginBottom: 8, paddingTop: 11, paddingBottom: 11, duration: 0.45, ease: 'power3.out', clearProps: 'height,marginBottom,paddingTop,paddingBottom' }, i * 0.9)
-        .to(n, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)', clearProps: 'transform' }, i * 0.9 + 0.15);
+      ntl.fromTo(n, { height: 0, marginBottom: 0, paddingTop: 0, paddingBottom: 0, opacity: 0, scale: 0.9 },
+          { height: 'auto', marginBottom: 8, paddingTop: 11, paddingBottom: 11, duration: 0.45, ease: 'power3.out' }, i * STEP)
+        .to(n, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)' }, i * STEP + 0.15);
     });
-    ST.create({ trigger: lock, start: 'top 70%', once: true, onEnter: function () {
-      clock.textContent = '15:58';
-      ntl.play(0);
-    } });
+    ntl.to({}, { duration: 0.5 }); // a beat with everything visible before the page moves on
+    ntl.progress(1, true).progress(0, true);
+
+    var hold = document.createElement('div');
+    hold.className = 'sx-hold';
+    sxGrid.parentNode.insertBefore(hold, sxGrid);
+    hold.appendChild(sxGrid);
+    var spacer = document.createElement('div');
+    hold.appendChild(spacer);
+    var stickTop = 0;
+    function layoutHold() {
+      // Stick so the bottom of the cards (where the lock screen is) stays on screen, even when
+      // the cards are taller than the viewport (then the top offset goes negative).
+      stickTop = Math.min(90, window.innerHeight - sxGrid.offsetHeight - 16);
+      sxGrid.style.top = stickTop + 'px';
+      spacer.style.height = Math.round(window.innerHeight * 0.32 * notifs.length) + 'px';
+    }
+    layoutHold();
+    ST.addEventListener('refreshInit', layoutHold);
+    function setClock() {
+      var shown = notifs.filter(function (n, i) { return ntl.time() >= i * STEP + 0.1; }).length;
+      clock.textContent = shown ? notifs[shown - 1].getAttribute('data-t') : '15:58';
+    }
+    clock.textContent = '15:58';
+    ST.create({
+      animation: ntl, trigger: hold, scrub: 0.4,
+      start: function () { return 'top ' + stickTop + 'px'; },
+      end: function () { return '+=' + spacer.offsetHeight; },
+      onUpdate: setClock, onRefresh: setClock
+    });
   }
 
   /* ---- generic reveals ---- */
