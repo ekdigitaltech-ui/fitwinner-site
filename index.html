@@ -34,6 +34,7 @@
       <span>Fit<b>Winner</b></span>
     </a>
     <nav class="nav-links" aria-label="Sayfa">
+      <a href="#sports" data-i18n="nav.sports">Sporlar</a>
       <a href="#how" data-i18n="nav.how">Nasıl çalışır</a>
       <a href="#privacy" data-i18n="nav.privacy">Gizlilik</a>
       <a href="#faq" data-i18n="nav.faq">SSS</a>
@@ -132,19 +133,82 @@
   <a class="scroll-cue" href="#how" aria-hidden="true" tabindex="-1"><span></span></a>
 </section>
 
-<!-- MARQUEE -->
-<section class="marquee" aria-label="Türk mutfağı" data-i18n-attr="aria-label:mq.label">
-  <div class="mq-row" data-dir="-1">
-    <div class="mq-track">
-      <span>Menemen</span><span>Mercimek çorbası</span><span>Izgara köfte</span><span>Bulgur pilavı</span><span>Lahmacun</span><span>Kuru fasulye</span><span>Yayla çorbası</span><span>Karnıyarık</span><span>Ayran</span><span>Simit</span>
+<!-- SPORTS: marquee + per-session energy + per-session notifications -->
+<section class="sports" id="sports" aria-labelledby="sports-title">
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-row" data-dir="-1">
+      <div class="mq-track">
+        <span data-i18n="sp.football">Futbol</span><span data-i18n="sp.running">Koşu</span><span data-i18n="sp.basketball">Basketbol</span><span data-i18n="sp.swimming">Yüzme</span><span data-i18n="sp.tennis">Tenis</span><span data-i18n="sp.cycling">Bisiklet</span><span data-i18n="sp.boxing">Boks</span><span data-i18n="sp.volleyball">Voleybol</span><span data-i18n="sp.crossfit">CrossFit</span><span data-i18n="sp.handball">Hentbol</span><span data-i18n="sp.climbing">Tırmanış</span>
+      </div>
+    </div>
+    <div class="mq-row alt" data-dir="1">
+      <div class="mq-track">
+        <span data-i18n="sp.fitness">Fitness</span><span data-i18n="sp.yoga">Yoga</span><span data-i18n="sp.hiit">HIIT</span><span data-i18n="sp.rowing">Kürek</span><span data-i18n="sp.pilates">Pilates</span><span data-i18n="sp.martial">Dövüş sanatları</span><span data-i18n="sp.hiking">Doğa yürüyüşü</span><span data-i18n="sp.dance">Dans</span><span data-i18n="sp.badminton">Badminton</span><span data-i18n="sp.skiing">Kayak</span><span data-i18n="sp.mobility">Mobilite</span>
+      </div>
     </div>
   </div>
-  <div class="mq-row alt" data-dir="1">
-    <div class="mq-track">
-      <span>Yulaf</span><span>Tavuk şiş</span><span>Peynirli pide</span><span>Zeytinyağlı fasulye</span><span>Mantı</span><span>Haşlanmış yumurta</span><span>Cacık</span><span>İmam bayıldı</span><span>Kefir</span><span>Sütlaç</span>
+
+  <div class="wrap">
+    <header class="sec-head sports-head" data-reveal>
+      <p class="eyebrow" data-i18n="sx.eyebrow">Futboldan yogaya</p>
+      <h2 id="sports-title" data-i18n="sx.title">Her seans günlük hedefine yansır.</h2>
+      <p class="sec-lede" data-i18n="sx.lede">Futboldan yogaya, yaptığın ya da planladığın her antrenman o günün kalori hedefine eklenir ve her seans için zamanında bildirim gelir.</p>
+    </header>
+
+    <div class="sx-grid">
+      <!-- energy calculator -->
+      <div class="sx-card calc" data-reveal>
+        <h3 data-i18n="cx.t">Seans → kalori hedefi</h3>
+        <p class="sx-p" data-i18n="cx.p">Spor, süre ve zorluk (RPE) seansın enerjisini belirler; Apple Watch nabzı varsa hesap onu kullanır, saat ölçtüyse aynı kalori iki kez sayılmaz.</p>
+
+        <div class="chips" role="radiogroup" aria-label="Spor" data-i18n-attr="aria-label:cx.sport">
+          <button type="button" role="radio" aria-checked="true" data-met="8" data-i18n="sp.football">Futbol</button>
+          <button type="button" role="radio" aria-checked="false" data-met="9" data-i18n="sp.running">Koşu</button>
+          <button type="button" role="radio" aria-checked="false" data-met="8" data-i18n="sp.cycling">Bisiklet</button>
+          <button type="button" role="radio" aria-checked="false" data-met="8" data-i18n="sp.swimming">Yüzme</button>
+          <button type="button" role="radio" aria-checked="false" data-met="7.5" data-i18n="sp.basketball">Basketbol</button>
+          <button type="button" role="radio" aria-checked="false" data-met="8" data-i18n="sp.tennis">Tenis</button>
+          <button type="button" role="radio" aria-checked="false" data-met="9" data-i18n="sp.boxing">Boks</button>
+          <button type="button" role="radio" aria-checked="false" data-met="5" data-i18n="sp.fitness">Fitness</button>
+          <button type="button" role="radio" aria-checked="false" data-met="3" data-i18n="sp.yoga">Yoga</button>
+        </div>
+
+        <div class="sliders">
+          <label><span><span data-i18n="cx.dur">Süre</span> <output id="cx-dur-o">60</output> <span data-i18n="cx.min">dk</span></span>
+            <input id="cx-dur" type="range" min="15" max="120" step="15" value="60"></label>
+          <label><span><span data-i18n="cx.rpe">Zorluk (RPE)</span> <output id="cx-rpe-o">7</output>/10</span>
+            <input id="cx-rpe" type="range" min="1" max="10" step="1" value="7"></label>
+        </div>
+
+        <div class="cx-out">
+          <div class="cx-session"><span data-i18n="cx.session">Bu seans</span><b>+<span id="cx-kcal">621</span> kcal</b></div>
+          <div class="cx-stack" aria-hidden="true"><i class="cx-base"></i><i class="cx-add"></i></div>
+          <div class="cx-legend">
+            <span><i class="dot base"></i><span data-i18n="cx.base">Antrenmansız gün</span> <b><span id="cx-base">1.750</span> kcal</b></span>
+            <span><i class="dot add"></i><span data-i18n="cx.today">Bugünkü hedef</span> <b><span id="cx-total">2.371</span> kcal</b></span>
+          </div>
+          <p class="cx-note" data-i18n="cx.note">Örnek: 75 kg. Seans enerjisi = (MET × zorluk katsayısı − 1) × kilo × saat.</p>
+        </div>
+      </div>
+
+      <!-- notifications -->
+      <div class="sx-card notif" data-reveal>
+        <h3 data-i18n="nx.t">Her seans için bildirim</h3>
+        <p class="sx-p" data-i18n="nx.p">Bildirimleri açtığında seans hatırlatmasının ne kadar önce geleceğini sen seçersin: 30, 60, 90 ya da 120 dakika. Antrenman saatine göre öğün hatırlatmaları, maç arifesinde karbonhidrat yükleme ve sıcak günlerde elektrolit hatırlatması da kurulur. Atladığın seansa bildirim gelmez; plan değişince takvim yeniden kurulur.</p>
+
+        <div class="lock" aria-hidden="true">
+          <div class="lock-clock"><span class="lock-day" data-i18n="nx.day">Cuma</span><b class="lock-time">19:00</b></div>
+          <div class="nlist">
+            <div class="n" data-t="16:00" style="--c:var(--orange)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.1t">Antrenman öncesi öğün</b><time>16:00</time></p><p data-i18n="nx.1p">Hazırlık antrenmanı 18:00'de. Hafif bir öğün için iyi zaman.</p></div></div>
+            <div class="n" data-t="17:00" style="--c:var(--blue)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.3t">Seans 1 saat sonra</b><time>17:00</time></p><p data-i18n="nx.3p">Hazırlık · hafif · 30 dk</p></div></div>
+            <div class="n" data-t="19:00" style="--c:var(--mint)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.4t">Toparlanma öğünü</b><time>19:00</time></p><p data-i18n="nx.4p">Seans bitti. Protein ve karbonhidratla toparlan.</p></div></div>
+            <div class="n" data-t="19:00" style="--c:var(--pink)"><i class="n-ico"></i><div><p class="n-h"><b data-i18n="nx.5t">Yarın maç</b><time>19:00</time></p><p data-i18n="nx.5p">Maç arifesi: bu akşam karbonhidrat yükleme öğünü.</p></div></div>
+          </div>
+        </div>
+        <p class="cx-note" data-i18n="nx.note">Örnek bildirimler. Hepsi telefonunda yerel olarak kurulur; sunucudan bildirim gönderilmez.</p>
+      </div>
     </div>
   </div>
-  <p class="wrap mq-caption" data-i18n="mq.caption">Türk mutfağı dahil binlerce besin. Malzemeleri ekle, toplam kalori ve makrolar veritabanından hesaplansın.</p>
 </section>
 
 <!-- HOW: pinned showcase -->

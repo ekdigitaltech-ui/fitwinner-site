@@ -26,6 +26,39 @@
   onScroll();
 
   // ?motion=1 forces motion for testing on machines with Reduce Motion turned on.
+  // Session → calorie target calculator. Same formula as the app's ExerciseEnergy:
+  // kcal = (baseMET × RPE factor − 1) × kg × hours, RPE factor = 0.6 + 0.08 × RPE (METTable).
+  var calc = document.querySelector('.calc');
+  var WEIGHT = 75, REST_DAY = 1750; // rest day = BMR 1640 + job 410 − goal 300 (showcase step 1)
+  var calcState = { met: 8, dur: 60, rpe: 7 };
+  function paintRange(r) { r.style.setProperty('--p', ((r.value - r.min) / (r.max - r.min) * 100) + '%'); }
+  function updateCalc() {
+    var kcal = (calcState.met * (0.6 + 0.08 * calcState.rpe) - 1) * WEIGHT * calcState.dur / 60;
+    kcal = Math.max(0, Math.round(kcal));
+    document.getElementById('cx-kcal').textContent = fmt(kcal);
+    document.getElementById('cx-base').textContent = fmt(REST_DAY);
+    document.getElementById('cx-total').textContent = fmt(REST_DAY + kcal);
+    var scale = 3500; // bar full width
+    calc.querySelector('.cx-base').style.flexBasis = (REST_DAY / scale * 100) + '%';
+    calc.querySelector('.cx-add').style.flexBasis = (kcal / scale * 100) + '%';
+  }
+  if (calc) {
+    calc.querySelectorAll('.chips button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        calc.querySelectorAll('.chips button').forEach(function (x) { x.setAttribute('aria-checked', String(x === b)); });
+        calcState.met = parseFloat(b.getAttribute('data-met'));
+        updateCalc();
+      });
+    });
+    [['cx-dur', 'dur'], ['cx-rpe', 'rpe']].forEach(function (p) {
+      var r = document.getElementById(p[0]), o = document.getElementById(p[0] + '-o');
+      paintRange(r);
+      r.addEventListener('input', function () { calcState[p[1]] = +r.value; o.textContent = r.value; paintRange(r); updateCalc(); });
+    });
+    updateCalc();
+    document.addEventListener('fw:lang', updateCalc);
+  }
+
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches && !/[?&]motion=1\b/.test(location.search);
   if (reduce || !window.gsap || !window.ScrollTrigger) return;
 
@@ -121,6 +154,18 @@
     gsap.fromTo(track, { xPercent: dir < 0 ? 0 : -30 }, { xPercent: dir < 0 ? -30 : 0, ease: 'none',
       scrollTrigger: { trigger: '.marquee', start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
   });
+
+  /* ---- notifications drop in one by one while the lock-screen clock runs ---- */
+  var lock = document.querySelector('.lock');
+  if (lock) {
+    var clock = lock.querySelector('.lock-time');
+    var notifs = gsap.utils.toArray('.lock .n');
+    var ntl = gsap.timeline({ paused: true });
+    ntl.from(notifs, { y: -40, opacity: 0, scale: 0.92, duration: 0.7, ease: 'back.out(1.7)', stagger: {
+      each: 0.75, onStart: function () { var t = this.targets()[0].getAttribute('data-t'); if (t) clock.textContent = t; } } });
+    ntl.add(function () { clock.textContent = '19:00'; });
+    ST.create({ trigger: lock, start: 'top 70%', once: true, onEnter: function () { clock.textContent = '15:58'; ntl.play(0); } });
+  }
 
   /* ---- generic reveals ---- */
   gsap.utils.toArray('[data-reveal]').forEach(function (el) {
