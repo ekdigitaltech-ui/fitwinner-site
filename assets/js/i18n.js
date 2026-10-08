@@ -10,7 +10,7 @@
     igbtn: 'Follow on Instagram',
     'hero.eyebrow': 'For iPhone and Apple Watch',
     'hero.t1': 'Calories, training', 'hero.t2': 'and recovery.', 'hero.t3': 'In one place.',
-    'hero.lede': 'FitWinner works out your daily calorie target, training plan and form score from your own data, right on your phone. No guesswork, just math.',
+    'hero.lede': 'FitWinner works out your daily calorie target, training plan and form score from your own data, right on your phone. No guesswork, just science-based calculations.',
     'hero.how': 'How it works',
     'hero.f1': 'No account', 'hero.f2': 'Works offline', 'hero.f3': 'Your data stays on your phone',
     'hero.sample': 'Sample data',
