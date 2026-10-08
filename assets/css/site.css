@@ -90,6 +90,9 @@ p { margin: 0; }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 24px; border-radius: 999px; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .25s, background .25s, box-shadow .25s; }
 .btn svg { width: 20px; height: 20px; }
 .btn-primary { background: var(--text); color: #000; cursor: default; box-shadow: 0 10px 40px -10px rgba(42, 189, 163, .55); }
+.btn-ig { color: var(--text); border: 1px solid transparent; background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(120deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5) border-box; }
+.btn-ig:hover { transform: translateY(-1px); box-shadow: 0 10px 34px -12px rgba(214, 41, 118, .6); }
+.closer-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .btn-ghost { border: 1px solid var(--line); color: var(--text); }
 .btn-ghost:hover { background: rgba(255, 255, 255, .06); transform: translateY(-1px); }
 

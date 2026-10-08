@@ -7,6 +7,7 @@
     skip: 'Skip to content',
     'nav.how': 'How it works', 'nav.privacy': 'Privacy', 'nav.faq': 'FAQ',
     soon: 'Coming soon to the App Store',
+    igbtn: 'Follow on Instagram',
     'hero.eyebrow': 'For iPhone and Apple Watch',
     'hero.t1': 'Calories, training', 'hero.t2': 'and recovery.', 'hero.t3': 'In one place.',
     'hero.lede': 'FitWinner calculates your daily calorie target, training plan and form score from your own data, on your device. Calculated, not guessed.',
