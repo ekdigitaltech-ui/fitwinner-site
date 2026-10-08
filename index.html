@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FitWinner — Kalori, antrenman ve toparlanma</title>
+<meta name="description" content="FitWinner günlük kalori hedefini, antrenman planını ve form skorunu senin verinle, cihazında hesaplar. iPhone ve Apple Watch için. Yakında App Store'da.">
+<meta name="theme-color" content="#05070a">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://fitwinner.app/">
+<link rel="icon" type="image/png" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fitwinner.app/">
+<meta property="og:title" content="FitWinner — Kalori, antrenman ve toparlanma">
+<meta property="og:description" content="Kalori hedefin, makroların ve form skorun cihazında hesaplanır. Yakında App Store'da.">
+<meta property="og:image" content="https://fitwinner.app/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="FitWinner">
+      <img class="brand-mark" src="assets/img/favicon-64.png" width="32" height="32" alt="">
+      <span>Fit<b>Winner</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Sayfa">
+      <a href="#how" data-i18n="nav.how">Nasıl çalışır</a>
+      <a href="#privacy" data-i18n="nav.privacy">Gizlilik</a>
+      <a href="#faq" data-i18n="nav.faq">SSS</a>
+    </nav>
+    <div class="nav-end">
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <span class="pill pill-soon" data-i18n="soon">Yakında App Store'da</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow" data-anim="intro" data-i18n="hero.eyebrow">iPhone ve Apple Watch için</p>
+      <h1 id="hero-title" class="hero-title" data-anim="intro">
+        <span class="line" data-i18n="hero.t1">Kalori, antrenman</span>
+        <span class="line" data-i18n="hero.t2">ve toparlanma.</span>
+        <span class="line grad" data-i18n="hero.t3">Tek yerde.</span>
+      </h1>
+      <p class="lede" data-anim="intro" data-i18n="hero.lede">FitWinner günlük kalori hedefini, antrenman planını ve form skorunu senin verinle, cihazında hesaplar. Tahmin değil, hesap.</p>
+      <div class="hero-cta" data-anim="intro">
+        <span class="btn btn-primary" aria-disabled="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.8 1.4-.6.7-1.1 1.8-1 2.9 1.1.1 2.1-.5 2.8-1.3z"/></svg>
+          <span data-i18n="soon">Yakında App Store'da</span>
+        </span>
+        <a class="btn btn-ghost" href="#how"><span data-i18n="hero.how">Nasıl çalışır</span> <span aria-hidden="true">↓</span></a>
+      </div>
+      <ul class="hero-facts" data-anim="intro">
+        <li data-i18n="hero.f1">Hesap açmadan</li>
+        <li data-i18n="hero.f2">Çevrimdışı çalışır</li>
+        <li data-i18n="hero.f3">Veriler cihazında</li>
+      </ul>
+    </div>
+
+    <div class="hero-stage" aria-hidden="true">
+      <div class="stage-tilt">
+        <div class="ring-deco" data-depth="-0.15"></div>
+        <div class="phone hero-phone" data-depth="0.08">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="scr scr-home">
+              <div class="scr-top"><span>09:41</span><b>FitWinner</b><span class="dots">●●●</span></div>
+              <div class="w">
+                <div class="w-h" style="--c:var(--blue)"><span class="ico">●</span><span data-i18n="m.target">Günlük hedef</span></div>
+                <div class="big"><span data-count="2130" data-format="int">2.130</span><small>kcal</small></div>
+                <div class="macros">
+                  <div><span data-i18n="m.protein">Protein</span><b>132 g</b><i style="--w:78%;--c:var(--blue)"></i></div>
+                  <div><span data-i18n="m.carbs">Karb.</span><b>240 g</b><i style="--w:55%;--c:var(--orange)"></i></div>
+                  <div><span data-i18n="m.fat">Yağ</span><b>68 g</b><i style="--w:62%;--c:var(--pink)"></i></div>
+                </div>
+              </div>
+              <div class="w w-row">
+                <div>
+                  <div class="w-h" style="--c:var(--mint)"><span class="ico">●</span><span data-i18n="m.form">Form</span></div>
+                  <div class="mid"><span data-count="77" data-format="int">77</span><small data-i18n="m.good">iyi</small></div>
+                </div>
+                <svg class="spark" viewBox="0 0 120 40"><path d="M2 30 L18 26 L32 28 L46 18 L60 22 L74 14 L88 17 L102 9 L118 11" fill="none" stroke="var(--mint)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></svg>
+              </div>
+              <div class="w">
+                <div class="w-h" style="--c:var(--orange)"><span class="ico">●</span><span data-i18n="m.calories">Kalori</span></div>
+                <div class="mid"><span data-count="1262" data-format="int">1.262</span><small>/ <span data-count="2130" data-static>2.130</span> kcal</small></div>
+                <div class="bar"><i style="--w:59%;--c:var(--orange)"></i></div>
+              </div>
+              <div class="w">
+                <div class="w-h" style="--c:var(--indigo)"><span class="ico">●</span><span data-i18n="m.calendar">Takvim</span></div>
+                <p class="w-p" data-i18n="m.week">Bu hafta 4 seans planlı · Cumartesi maç</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card fc-1" data-depth="0.35">
+          <span class="fc-k" data-i18n="fc.left">Kalan</span>
+          <span class="fc-v"><span data-count="868" data-format="int">868</span> kcal</span>
+        </div>
+        <div class="float-card fc-2" data-depth="0.55">
+          <span class="fc-k" data-i18n="fc.hrv">HRV · 7 gün</span>
+          <svg viewBox="0 0 100 28" class="fc-spark"><path d="M2 20 L14 16 L26 18 L38 10 L50 13 L62 7 L74 9 L86 5 L98 6" fill="none" stroke="var(--pink)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="float-card fc-3" data-depth="0.25">
+          <span class="fc-k" data-i18n="fc.next">Sıradaki</span>
+          <span class="fc-v small" data-i18n="fc.session">Mobilite · 30 dk</span>
+        </div>
+      </div>
+      <p class="stage-note" data-i18n="hero.sample">Örnek veriler</p>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#how" aria-hidden="true" tabindex="-1"><span></span></a>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee" aria-label="Türk mutfağı" data-i18n-attr="aria-label:mq.label">
+  <div class="mq-row" data-dir="-1">
+    <div class="mq-track">
+      <span>Menemen</span><span>Mercimek çorbası</span><span>Izgara köfte</span><span>Bulgur pilavı</span><span>Lahmacun</span><span>Kuru fasulye</span><span>Yayla çorbası</span><span>Karnıyarık</span><span>Ayran</span><span>Simit</span>
+    </div>
+  </div>
+  <div class="mq-row alt" data-dir="1">
+    <div class="mq-track">
+      <span>Yulaf</span><span>Tavuk şiş</span><span>Peynirli pide</span><span>Zeytinyağlı fasulye</span><span>Mantı</span><span>Haşlanmış yumurta</span><span>Cacık</span><span>İmam bayıldı</span><span>Kefir</span><span>Sütlaç</span>
+    </div>
+  </div>
+  <p class="wrap mq-caption" data-i18n="mq.caption">Türk mutfağı dahil binlerce besin. Malzemeleri ekle, toplam kalori ve makrolar veritabanından hesaplansın.</p>
+</section>
+
+<!-- HOW: pinned showcase -->
+<section class="how" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="eyebrow" data-i18n="how.eyebrow">Nasıl çalışır</p>
+      <h2 id="how-title" data-i18n="how.title">Her sayı nereden geldiğini bilir.</h2>
+    </header>
+  </div>
+  <div class="showcase">
+    <div class="wrap showcase-inner">
+      <div class="sc-phone" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen sc-screens"></div>
+        </div>
+        <div class="sc-progress"><i></i></div>
+        <p class="stage-note static" data-i18n="hero.sample">Örnek veriler</p>
+      </div>
+      <div class="sc-steps">
+
+        <article class="step" data-accent="orange">
+          <div class="step-text">
+            <span class="step-n">01</span>
+            <h3 data-i18n="s1.t">Gününe göre kalori</h3>
+            <p data-i18n="s1.p">Hedefin yaşına, kilona, mesleğine ve antrenman yoğunluğuna göre hesaplanır. Apple Watch'tan gelen aktif kalori ve antrenmanlar otomatik eklenir. Hesabın nasıl yapıldığını satır satır görürsün.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-cal">
+              <div class="scr-title" data-i18n="s1.scr">Enerji dökümü</div>
+              <div class="rows">
+                <div class="r"><span data-i18n="s1.bmr">Bazal metabolizma</span><b><span data-count="1640" data-format="int">1.640</span> kcal</b></div>
+                <div class="r"><span data-i18n="s1.job">Meslek ve günlük hareket</span><b>+<span data-count="410" data-format="int">410</span> kcal</b></div>
+                <div class="r"><span data-i18n="s1.train">Planlı antrenman</span><b>+<span data-count="380" data-format="int">380</span> kcal</b></div>
+                <div class="r"><span data-i18n="s1.goal">Hedef ayarı</span><b>−<span data-count="300" data-format="int">300</span> kcal</b></div>
+                <div class="r total"><span data-i18n="m.target">Günlük hedef</span><b><span data-count="2130" data-format="int">2.130</span> kcal</b></div>
+              </div>
+              <div class="donut">
+                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="48" class="d-bg"/><circle cx="60" cy="60" r="48" class="d-fg" style="--c:var(--orange)" pathLength="100" stroke-dasharray="59 100"/></svg>
+                <div class="donut-c"><b data-count="868" data-format="int">868</b><span data-i18n="fc.left">Kalan</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step" data-accent="green">
+          <div class="step-text">
+            <span class="step-n">02</span>
+            <h3 data-i18n="s2.t">Türk mutfağını bilen besin kaydı</h3>
+            <p data-i18n="s2.p">Binlerce yerel ve uluslararası besin arasından ara, porsiyonu seç. Tarifin malzemelerini ekle; toplam kalori ve makrolar veritabanından gelsin. Tahmini değerler "tahmini" diye işaretlenir.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-food">
+              <div class="scr-title" data-i18n="s2.scr">Bugün</div>
+              <div class="search"><span>⌕</span><span class="typed" data-i18n="s2.q">mercimek</span><i class="caret"></i></div>
+              <div class="rows">
+                <div class="r food"><span>Mercimek çorbası<small data-i18n="s2.p1">1 kase · 250 g</small></span><b>178 kcal</b></div>
+                <div class="r food"><span>Izgara köfte<small data-i18n="s2.p2">4 adet · 120 g</small></span><b>286 kcal</b></div>
+                <div class="r food"><span>Bulgur pilavı<small data-i18n="s2.p3">1 porsiyon · 150 g</small></span><b>231 kcal</b></div>
+                <div class="r food"><span>Ayran<small data-i18n="s2.p4">1 bardak · 200 ml</small></span><b>76 kcal</b></div>
+              </div>
+              <div class="macro-stack"><i style="--w:30%;--c:var(--blue)"></i><i style="--w:45%;--c:var(--orange)"></i><i style="--w:25%;--c:var(--pink)"></i></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step" data-accent="mint">
+          <div class="step-text">
+            <span class="step-n">03</span>
+            <h3 data-i18n="s3.t">Toparlanma ve form skoru</h3>
+            <p data-i18n="s3.p">Uyku, yorgunluk ve kas ağrısı check-in'in; Apple Watch bağlıysa dinlenme nabzı ve HRV. Her gün, kendi 28 günlük ortalamana göre bir form skoru. Toparlanman düştüğünde hacmi azaltma önerisi gelir.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-form">
+              <div class="scr-title" data-i18n="m.form">Form</div>
+              <div class="gauge">
+                <svg viewBox="0 0 140 140"><circle cx="70" cy="70" r="56" class="d-bg"/><circle cx="70" cy="70" r="56" class="d-fg" style="--c:var(--mint)" pathLength="100" stroke-dasharray="77 100"/></svg>
+                <div class="gauge-c"><b data-count="77" data-format="int">77</b><span data-i18n="s3.band">İyi · yatay</span></div>
+              </div>
+              <div class="comp">
+                <div><span data-i18n="s3.c1">Uyku</span><i style="--w:72%"></i></div>
+                <div><span data-i18n="s3.c2">Yorgunluk</span><i style="--w:58%"></i></div>
+                <div><span data-i18n="s3.c3">Kas ağrısı</span><i style="--w:44%"></i></div>
+                <div><span>HRV</span><i style="--w:81%"></i></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="step" data-accent="indigo">
+          <div class="step-text">
+            <span class="step-n">04</span>
+            <h3 data-i18n="s4.t">Haftalık plan, maça hazır</h3>
+            <p data-i18n="s4.p">Antrenman takvimi, haftalık plan ve yük takibi. Maç ya da yarış öncesi hazırlık penceresi işaretlenir. Besin önerileri o günkü antrenmana ve kalan kalorine göre değişir.</p>
+          </div>
+          <div class="mini-phone" aria-hidden="true">
+            <div class="scr scr-plan">
+              <div class="scr-title" data-i18n="s4.scr">Bu hafta</div>
+              <div class="days">
+                <div class="d"><b data-i18n="s4.d1">Pzt</b><span data-i18n="s4.x1">Kuvvet</span><em>60′</em></div>
+                <div class="d"><b data-i18n="s4.d2">Sal</b><span data-i18n="s4.x2">Branşa özel</span><em>75′</em></div>
+                <div class="d rest"><b data-i18n="s4.d3">Çar</b><span data-i18n="s4.x3">Aktif dinlenme</span><em>30′</em></div>
+                <div class="d"><b data-i18n="s4.d4">Per</b><span data-i18n="s4.x4">Pliometrik</span><em>45′</em></div>
+                <div class="d taper"><b data-i18n="s4.d5">Cum</b><span data-i18n="s4.x5">Hazırlık · hafif</span><em>30′</em></div>
+                <div class="d match"><b data-i18n="s4.d6">Cmt</b><span data-i18n="s4.x6">Maç</span><em>⚑</em></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="privacy" id="privacy" aria-labelledby="privacy-title">
+  <div class="orbit" aria-hidden="true" data-depth="0.2">
+    <div class="o o1"><i></i></div><div class="o o2"><i></i><i></i></div><div class="o o3"><i></i><i></i><i></i></div>
+    <div class="o-core">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3zm0 10.9h6c-.5 3.9-3 7.3-6 8.3v-8.3H6V6.3l6-2.2v8.8z"/></svg>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow" data-reveal data-i18n="pv.eyebrow">Gizlilik önce gelir</p>
+    <h2 id="privacy-title" class="statement" data-words data-i18n="pv.title">Hesaplar cihazında yapılır. İnternet gerekmez. Ham sağlık verin telefondan çıkmaz.</h2>
+    <div class="pv-grid">
+      <div class="pv" data-reveal>
+        <h3 data-i18n="pv.a.t">Hesap yok</h3>
+        <p data-i18n="pv.a.p">Uygulamayı kullanmak için hesap açman gerekmez. Verilerin cihazında tutulur.</p>
+      </div>
+      <div class="pv" data-reveal>
+        <h3 data-i18n="pv.b.t">Deterministik çekirdek</h3>
+        <p data-i18n="pv.b.p">Kalori hedefi, makrolar ve form skoru cihazdaki hesap motorlarında bulunur. Aynı girdi, her zaman aynı sonuç.</p>
+      </div>
+      <div class="pv" data-reveal>
+        <h3 data-i18n="pv.c.t">Yapay zekâ yalnız izinle</h3>
+        <p data-i18n="pv.c.p">Yorum metinleri yalnız sen izin verirsen, kimliksiz bir özetten üretilir. İzni istediğin an geri çekebilirsin; o veriden üretilen yorumlar da silinir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <header class="sec-head" data-reveal>
+      <p class="eyebrow" data-i18n="faq.eyebrow">Sıkça sorulanlar</p>
+      <h2 id="faq-title" data-i18n="faq.title">Kısaca.</h2>
+    </header>
+    <div class="qa" data-reveal>
+      <details>
+        <summary data-i18n="q1">Ne zaman çıkacak?</summary>
+        <p data-i18n="a1">FitWinner şu an kapalı beta testinde. App Store'a çıktığında bu sayfada duyuracağız.</p>
+      </details>
+      <details>
+        <summary data-i18n="q2">Apple Watch şart mı?</summary>
+        <p data-i18n="a2">Hayır. Kalori, besin kaydı ve antrenman planı saatsiz çalışır. Apple Watch ya da Apple Sağlık bağlarsan dinlenme nabzı, HRV ve uyku form skoruna eklenir.</p>
+      </details>
+      <details>
+        <summary data-i18n="q3">Yapay zekâ ne yapıyor?</summary>
+        <p data-i18n="a3">Yalnız izin verirsen, form skorunu ve planını yorumlayan kısa metinler yazar. Sayıları hesaplamaz; kalori hedefi, makrolar ve form skoru cihazdaki hesaplardan gelir.</p>
+      </details>
+      <details>
+        <summary data-i18n="q4">Tıbbi tavsiye veriyor mu?</summary>
+        <p data-i18n="a4">Hayır. FitWinner 18 yaş ve üzeri içindir; tıbbi cihaz değildir, tanı koymaz, tedavi önermez. Bir sağlık durumun varsa hedeflerini hekiminle konuş.</p>
+      </details>
+      <details>
+        <summary data-i18n="q5">Hangi dilleri destekliyor?</summary>
+        <p data-i18n="a5">Uygulama 11 dilde kullanılabilir: Türkçe, İngilizce, Fransızca, Hollandaca, İspanyolca, İtalyanca, Portekizce, Lehçe, Yunanca, Çekçe ve Estonca. Bu site Türkçe ve İngilizcedir.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSER -->
+<section class="closer" aria-labelledby="closer-title">
+  <div class="aurora small" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+  <div class="wrap closer-inner" data-reveal>
+    <img class="closer-icon" src="assets/img/icon-512.png" width="96" height="96" alt="" loading="lazy">
+    <h2 id="closer-title" data-i18n="cl.title">Tahmine değil, kendi verine dayan.</h2>
+    <span class="btn btn-primary" aria-disabled="true"><span data-i18n="soon">Yakında App Store'da</span></span>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div>
+      <a class="brand" href="#top" aria-label="FitWinner"><span>Fit<b>Winner</b></span></a>
+      <p class="muted">© 2026 EK Digital Technologies OÜ</p>
+    </div>
+    <nav class="foot-links" aria-label="Yasal" data-i18n-attr="aria-label:ft.legal">
+      <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/privacy/" data-i18n="ft.privacy">Gizlilik Politikası</a>
+      <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/terms/" data-i18n="ft.terms">Kullanım Şartları</a>
+      <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/kvkk/" data-i18n="ft.kvkk">KVKK Aydınlatma Metni</a>
+      <a href="mailto:enis@ekdigital.tech" data-i18n="ft.contact">İletişim</a>
+    </nav>
+  </div>
+  <p class="wrap tm muted" data-i18n="ft.tm">Apple, iPhone, Apple Watch ve App Store, Apple Inc.'in ABD ve diğer ülkelerde tescilli ticari markalarıdır. Bu site çerez ya da analiz aracı kullanmaz.</p>
+</footer>
+</body>
+</html>
