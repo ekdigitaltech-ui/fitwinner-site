@@ -44,6 +44,7 @@ body {
   font: 400 17px/1.55 var(--font);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-x: clip; /* hidden would make body a scroll container in some browsers and break sticky */
 }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
@@ -219,7 +220,9 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
 .lock-clock { text-align: center; margin-bottom: 18px; }
 .lock-day { display: block; font-size: 14px; color: rgba(255, 255, 255, .75); font-weight: 600; }
 .lock-time { display: block; font: 700 64px/1 var(--font-num); letter-spacing: -.02em; }
-.nlist { display: grid; gap: 8px; }
+.nlist { display: flex; flex-direction: column; overflow: hidden; }
+.nlist .n { margin-bottom: 8px; transform-origin: top center; }
+.lock { overflow: hidden; }
 .n { display: grid; grid-template-columns: 32px 1fr; gap: 10px; align-items: start; padding: 11px 12px; border-radius: 18px; background: rgba(40, 44, 52, .62); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); font-size: 13px; }
 .n-ico { width: 32px; height: 32px; border-radius: 8px; background: url(../img/favicon-64.png) center / cover; box-shadow: inset 0 0 0 2px var(--c); }
 .n-h { display: flex; justify-content: space-between; gap: 8px; }
@@ -280,8 +283,8 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
 .d.match span { font-weight: 700; }
 
 /* ---------- showcase (motion layout) ---------- */
-.pinned .showcase { height: 100vh; height: 100svh; position: relative; }
-.pinned .showcase-inner { height: 100%; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
+.pinned .showcase { position: relative; height: calc(var(--steps, 4) * 85vh + 100vh); }
+.pinned .showcase-inner { position: sticky; top: 0; height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
 .pinned .sc-phone { display: grid; justify-items: center; gap: 18px; order: 2; }
 .pinned .sc-phone .phone { width: 300px; }
 @media (max-height: 820px) and (min-width: 981px) { .pinned .sc-phone .phone { zoom: .82; } }

@@ -83,6 +83,7 @@
   if (window.Lenis) {
     lenis = new window.Lenis({ lerp: 0.1, smoothWheel: true });
     lenis.on('scroll', ST.update);
+    ST.addEventListener('refresh', function () { lenis.resize(); });
     gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
     gsap.ticker.lagSmoothing(0);
     document.querySelectorAll('a[href^="#"]').forEach(function (a) {
@@ -157,13 +158,23 @@
   /* ---- notifications drop in one by one while the lock-screen clock runs ---- */
   var lock = document.querySelector('.lock');
   if (lock) {
+    // Like iOS: the newest notification lands on top and nudges the older ones down. The
+    // markup is newest-first, so they arrive in reverse DOM order. The lock screen's height is
+    // frozen at its final size first, so the card and the page never grow while they arrive.
     var clock = lock.querySelector('.lock-time');
-    var notifs = gsap.utils.toArray('.lock .n');
-    var ntl = gsap.timeline({ paused: true });
-    ntl.from(notifs, { y: -40, opacity: 0, scale: 0.92, duration: 0.7, ease: 'back.out(1.7)', stagger: {
-      each: 0.75, onStart: function () { var t = this.targets()[0].getAttribute('data-t'); if (t) clock.textContent = t; } } });
-    ntl.add(function () { clock.textContent = '19:00'; });
-    ST.create({ trigger: lock, start: 'top 70%', once: true, onEnter: function () { clock.textContent = '15:58'; ntl.play(0); } });
+    var notifs = gsap.utils.toArray('.lock .n').reverse(); // oldest first = arrival order
+    lock.style.height = lock.offsetHeight + 'px'; // measured while all notifications are still laid out
+    var ntl = gsap.timeline({ paused: true, onComplete: function () { lock.style.height = ''; } });
+    notifs.forEach(function (n, i) {
+      ntl.add(function () { clock.textContent = n.getAttribute('data-t') || clock.textContent; }, i * 0.9)
+        .fromTo(n, { height: 0, marginBottom: 0, paddingTop: 0, paddingBottom: 0, opacity: 0, scale: 0.9 },
+          { height: 'auto', marginBottom: 8, paddingTop: 11, paddingBottom: 11, duration: 0.45, ease: 'power3.out', clearProps: 'height,marginBottom,paddingTop,paddingBottom' }, i * 0.9)
+        .to(n, { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.8)', clearProps: 'transform' }, i * 0.9 + 0.15);
+    });
+    ST.create({ trigger: lock, start: 'top 70%', once: true, onEnter: function () {
+      clock.textContent = '15:58';
+      ntl.play(0);
+    } });
   }
 
   /* ---- generic reveals ---- */
@@ -192,12 +203,16 @@
       ST.create({ trigger: scr, start: 'top 80%', once: true, onEnter: function () { enterScreen(i); } });
     });
   } else {
+    // Sticky, not pinned: the browser keeps .showcase-inner inside its own (tall) .showcase box,
+    // so zoom/resize or a fast scroll can never leave a step stuck over another section
+    // (ScrollTrigger's position:fixed pin could). The timeline only scrubs across that box.
     var n = steps.length;
+    document.querySelector('.showcase').style.setProperty('--steps', n);
     var tl = gsap.timeline({
       defaults: { ease: 'power2.inOut', duration: 0.5 },
       scrollTrigger: {
-        trigger: '.showcase', start: 'top top', end: '+=' + (n * 85) + '%', pin: true, scrub: 0.8,
-        anticipatePin: 1,
+        trigger: '.showcase', start: 'top top', end: 'bottom bottom', scrub: 0.8,
+        invalidateOnRefresh: true,
         onUpdate: function (self) {
           var i = Math.min(n - 1, Math.floor(self.progress * n + 0.15));
           enterScreen(i);
