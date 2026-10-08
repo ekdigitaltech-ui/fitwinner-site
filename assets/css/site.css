@@ -523,9 +523,16 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
   .pill-soon { display: none; }
   .hero-stage { height: 560px; margin: 0 -16px; }
   .hero-phone { zoom: .86; }
-  .fc-1 { left: 4%; top: 10%; }
-  .fc-2 { right: 4%; top: 4%; }
-  .fc-3 { right: 4%; bottom: 10%; }
+  /* Phone width: smaller cards, parked over the parts of the mock screen that carry no data
+     (status bar at the top, the empty area under the Calendar card) instead of over the numbers. */
+  .float-card { padding: 8px 11px; border-radius: 14px; gap: 2px; }
+  .fc-k { font-size: 9.5px; }
+  .fc-v { font-size: 16px; }
+  .fc-v.small { font-size: 13px; }
+  .fc-spark { width: 78px; height: 22px; }
+  .fc-2 { right: 3%; top: 1%; }
+  .fc-1 { left: 3%; top: 73%; }
+  .fc-3 { right: 3%; top: 82%; bottom: auto; }
   .ring-deco { width: 340px; height: 340px; margin: -170px 0 0 -170px; }
   .step { padding: 22px; }
   .sx-card { padding: 22px; }
