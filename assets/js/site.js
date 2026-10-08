@@ -97,21 +97,40 @@
     .from('.hero-title .line', { yPercent: 110, opacity: 0, stagger: 0.09, duration: 1.3 }, '-=1')
     .from('.lede, .hero-cta, .hero-facts', { y: 24, opacity: 0, stagger: 0.08 }, '-=1');
 
-  var stageTl = gsap.timeline({ paused: true, defaults: { ease: 'expo.out', duration: 1.2 } });
+  // Desktop: the stage plays once on load. Phones (< 981px): the stage is driven by scroll
+  // from the very top of the page — it builds up as you scroll down and reverses as you
+  // scroll back, so it never runs unseen below the fold.
+  var stageEl = document.querySelector('.hero-stage');
+  var heroCounts = Array.prototype.slice.call(document.querySelectorAll('.hero [data-count]:not([data-static])'));
+  var scrubStage = window.matchMedia('(max-width: 980px)').matches;
+  var counter = { p: 0 };
+  var stageTl = gsap.timeline({ paused: true, defaults: { ease: scrubStage ? 'none' : 'expo.out', duration: 1.2 } });
   stageTl.from('.hero-phone', { y: 120, rotateX: 18, opacity: 0, duration: 1.6 }, 0)
     .from('.float-card', { y: 60, scale: 0.85, opacity: 0, stagger: 0.12, duration: 1.2 }, 0.45)
     .from('.ring-deco', { scale: 0.6, opacity: 0, duration: 2 }, 0)
-    .add(function () {
-      document.querySelectorAll('.hero [data-count]:not([data-static])').forEach(function (el, i) { countUp(el, i * 0.08); });
-    }, 0.55)
     .from('.hero .macros i, .hero .bar i', { scaleX: 0, transformOrigin: 'left', stagger: 0.06, duration: 1 }, 0.75)
     .fromTo('.hero .spark path', { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' }, 0.75);
-  var stageEl = document.querySelector('.hero-stage');
-  if (stageEl.getBoundingClientRect().top < window.innerHeight * 0.75) {
-    gsap.delayedCall(0.15, function () { stageTl.play(); });
+  // Initialise every tween now so the stage starts hidden on the very first paint
+  // (a paused timeline otherwise leaves the "from" states unapplied until a later frame).
+  stageTl.progress(1, true).progress(0, true);
+  if (scrubStage) {
+    stageTl.to(counter, { p: 1, duration: 1.4, onUpdate: function () {
+      heroCounts.forEach(function (el) { el.textContent = fmt(+el.getAttribute('data-count') * counter.p); });
+    } }, 0.55);
+    heroCounts.forEach(function (el) { el.textContent = fmt(0); });
+    ST.create({
+      animation: stageTl, trigger: '.hero', start: 0, scrub: 0.6,
+      // Fully built when the stage's middle reaches the middle of the screen.
+      end: function () {
+        var r = stageEl.getBoundingClientRect();
+        return Math.max(160, r.top + window.scrollY + r.height * 0.5 - window.innerHeight * 0.5);
+      }
+      // No invalidateOnRefresh: it wipes the recorded "from" states, and the end function is
+      // re-evaluated on every refresh anyway.
+    });
   } else {
-    document.querySelectorAll('.hero [data-count]:not([data-static])').forEach(function (el) { el.textContent = fmt(0); });
-    ST.create({ trigger: stageEl, start: 'top 80%', once: true, onEnter: function () { stageTl.play(); } });
+    stageTl.add(function () { heroCounts.forEach(function (el, i) { countUp(el, i * 0.08); }); }, 0.55);
+    gsap.delayedCall(0.15, function () { stageTl.play(); });
   }
 
   /* ---- hero parallax: scroll depth ---- */
