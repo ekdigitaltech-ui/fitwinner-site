@@ -174,13 +174,12 @@ p { margin: 0; }
 .marquee { padding: 70px 0 90px; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-2); }
 .mq-row { white-space: nowrap; }
 .mq-track { display: inline-flex; gap: 18px; padding-right: 18px; will-change: transform; }
-.mq-track span { font-size: clamp(30px, 5vw, 64px); font-weight: 800; letter-spacing: -.035em; color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, .22); }
-.mq-track span:nth-child(3n+1) { color: var(--text); -webkit-text-stroke: 0; }
-.mq-row.alt .mq-track span:nth-child(3n+1) { color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, .22); }
-.mq-row.alt .mq-track span:nth-child(3n+2) { background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-stroke: 0; }
-/* the app icon's yellow ("Winner"): solid in the first row, outlined in the second */
-.mq-track span:nth-child(3n+3) { color: var(--logo-yellow); -webkit-text-stroke: 0; }
-.mq-row.alt .mq-track span:nth-child(3n+3) { color: transparent; -webkit-text-stroke: 1.5px var(--logo-yellow); }
+.mq-track span { font-size: clamp(30px, 5vw, 64px); font-weight: 800; letter-spacing: -.035em; }
+/* mixed colours, word by word: white, the logo's yellow, the brand gradient, and outline */
+.mq-track .c-w { color: var(--text); }
+.mq-track .c-y { color: var(--logo-yellow); }
+.mq-track .c-g { background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mq-track .c-o { color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, .28); }
 .mq-track span::after { content: "·"; margin-left: 18px; color: var(--faint); -webkit-text-stroke: 0; }
 .mq-row + .mq-row { margin-top: 8px; }
 
