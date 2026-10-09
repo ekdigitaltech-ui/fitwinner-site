@@ -9,7 +9,7 @@
     soon: 'Coming soon to the App Store',
     igbtn: 'Follow on Instagram',
     'hero.eyebrow': 'For iPhone and Apple Watch',
-    'hero.t1': 'Calories, training', 'hero.t2': 'and recovery.', 'hero.t3': 'In one place.',
+    'hero.t1': 'Calories, training,', 'hero.t2': 'recovery.', 'hero.t3': 'One app,', 'hero.t4': 'with AI insights.',
     'hero.lede': 'FitWinner works out your daily calorie target, training plan and form score from your own data, right on your phone. No guesswork, just science-based calculations. Want more? Let the AI tell you what to do next.',
     'hero.how': 'How it works',
     'hero.f1': 'No account needed', 'hero.f2': 'Works offline', 'hero.f3': 'Your data stays on your phone',
