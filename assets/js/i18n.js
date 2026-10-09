@@ -118,9 +118,11 @@
     'a6': 'Your name, email address and account details are never shared, and the app doesn\'t use accounts at all. With your permission, a short, anonymous summary is sent, such as workout type and duration and your recent form scores. If you withdraw permission, comments made from that data are deleted too.',
     'q7': 'Are the AI features paid?',
     'a7': 'Comments prepared on your phone are free. Detailed AI comments, plan explanations and food estimates are part of Premium, and all of them are optional.',
+    'ck.title': 'Your cookie choice', 'ck.text': 'We use Google Analytics and Meta Pixel cookies to understand how the site is used and to measure our ads, only if you allow it.',
+    'ck.more': 'Privacy Policy', 'ck.reject': 'Decline', 'ck.accept': 'Accept', 'ft.cookies': 'Cookie preferences',
     'cl.title': 'Rely on your own data, not on guesses.',
     'ft.legal': 'Legal', 'ft.privacy': 'Privacy Policy', 'ft.terms': 'Terms of Use', 'ft.kvkk': 'KVKK Notice', 'ft.contact': 'Contact',
-    'ft.tm': 'Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. This site doesn\'t use cookies or analytics.'
+    'ft.tm': 'Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. Analytics and advertising cookies are used only with your permission.'
   };
 
   var TR = {}; // captured from the DOM on first run

@@ -30,12 +30,13 @@
 <meta name="twitter:title" content="FitWinner — Kalori, antrenman ve toparlanma">
 <meta name="twitter:description" content="Kalori hedefin, makroların ve form skorun telefonunda, senin verilerinle hesaplanır. Yakında App Store'da.">
 <meta name="twitter:image" content="https://fitwinner.app/assets/img/og-tr-1200x630.jpg">
-<link rel="stylesheet" href="assets/css/site.css?v=20261009c">
+<link rel="stylesheet" href="assets/css/site.css?v=20261009d">
 <script>document.documentElement.classList.add('js')</script>
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/i18n.js?v=20261009c" defer></script>
-<script src="assets/js/site.js?v=20261009c" defer></script>
+<script src="assets/js/i18n.js?v=20261009d" defer></script>
+<script src="assets/js/site.js?v=20261009d" defer></script>
+<script src="assets/js/consent.js?v=20261009d" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
@@ -619,10 +620,18 @@
       <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/terms/" data-i18n="ft.terms">Kullanım Şartları</a>
       <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/kvkk/" data-i18n="ft.kvkk">KVKK Aydınlatma Metni</a>
       <a href="mailto:enis@ekdigital.tech" data-i18n="ft.contact">İletişim</a>
+      <a href="#" data-consent-open data-i18n="ft.cookies">Çerez tercihleri</a>
       <a class="ig-foot" href="https://www.instagram.com/fitwinner.app/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg><span>@fitwinner.app</span></a>
     </nav>
   </div>
-  <p class="wrap tm muted" data-i18n="ft.tm">Apple, iPhone, Apple Watch ve App Store, Apple Inc.'in ABD'de ve diğer ülkelerde tescilli markalarıdır. Bu sitede çerez ya da analiz aracı yok.</p>
+  <p class="wrap tm muted" data-i18n="ft.tm">Apple, iPhone, Apple Watch ve App Store, Apple Inc.'in ABD'de ve diğer ülkelerde tescilli markalarıdır. Analiz ve reklam çerezleri yalnızca izin verdiğinde kullanılır.</p>
 </footer>
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-labelledby="consent-title" hidden>
+  <p class="consent-text"><b id="consent-title" data-i18n="ck.title">Çerez tercihin</b> <span data-i18n="ck.text">Siteyi nasıl kullanıldığını anlamak ve reklamlarımızın etkisini ölçmek için Google Analytics ve Meta Pixel çerezlerini yalnızca izin verirsen kullanırız.</span> <a href="https://ekdigitaltech-ui.github.io/fitwinner-legal/privacy/" data-i18n="ck.more">Gizlilik Politikası</a></p>
+  <div class="consent-actions">
+    <button type="button" class="btn-c" data-consent="reject" data-i18n="ck.reject">Reddet</button>
+    <button type="button" class="btn-c" data-consent="accept" data-i18n="ck.accept">Kabul et</button>
+  </div>
+</div>
 </body>
 </html>

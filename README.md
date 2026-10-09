@@ -16,3 +16,9 @@ App Store'a çıkınca: "Yakında App Store'da" yerlerini Apple'ın resmi rozeti
 `en/index.html` elle düzenlenmez; `index.html` ya da `assets/js/i18n.js` değişince yeniden üret:
 `node tools/build-en.mjs`. Sayfa İngilizce metni HTML'de taşır (önizleme botları JS çalıştırmaz)
 ve `assets/img/og-en-1200x630.jpg` paylaşım görselini kullanır. İngilizce paylaşımlarda https://fitwinner.app/en/ linkini kullan.
+
+## Ölçüm (GA4 + Meta Pixel)
+`assets/js/consent.js`: GA4 `G-VB3XJQ3CNX` ve Meta Pixel `2312794102811584` YALNIZ çerez şeridinde
+"Kabul et" sonrası yüklenir (KVKK/GDPR açık rıza). Tercih `localStorage['fw-consent']`; alt bilgideki
+"Çerez tercihleri" şeridi yeniden açar. Olaylar: `app_store_interest`, `instagram_click`, `language_switch`
+(GA4 event + Meta trackCustom). Pixel'in `<noscript>` görseli bilerek yok (rızasız istek atar).
