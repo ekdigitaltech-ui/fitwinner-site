@@ -3,7 +3,7 @@
 (function () {
   var EN = {
     'meta.title': 'FitWinner — Calories, training and recovery',
-    'meta.desc': 'FitWinner works out your daily calorie target, training plan and form score from your own data, right on your phone. For iPhone and Apple Watch. Coming soon to the App Store.',
+    'meta.desc': 'FitWinner calculates your daily calorie target, training plan and form score right on your phone, from your own data. If you\'d like, the AI interprets the results. For iPhone and Apple Watch. Coming soon to the App Store.',
     skip: 'Skip to content',
     'nav.how': 'How it works', 'nav.privacy': 'Privacy', 'nav.faq': 'FAQ',
     soon: 'Coming soon to the App Store',

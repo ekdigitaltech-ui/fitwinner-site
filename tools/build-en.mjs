@@ -28,7 +28,7 @@ html = html.replace(/(data-count="(\d+)"[^>]*>)([\d.]+)</g, (m, open, n) => open
 const head = {
   title: EN['meta.title'],
   desc: EN['meta.desc'],
-  ogDesc: 'Your calorie target, macros and form score, worked out on your phone from your own data. For iPhone and Apple Watch. Coming soon to the App Store.',
+  ogDesc: 'Your daily calorie target, training plan and form score are calculated right on your phone, based on what you share during setup and your daily logs. If you\'d like, the AI interprets the results for you in plain language.',
   ogAlt: 'FitWinner: Calories, training and recovery. In one place. A phone showing the daily calorie target, form score and calories cards.',
 };
 html = html
