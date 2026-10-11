@@ -25,5 +25,5 @@ ve `assets/img/og-en-1200x630.jpg` paylaşım görselini kullanır. İngilizce p
 
 ## Paylaşım görselleri
 Kaynak `tools/og/og-tr.html`, `og-en.html` (+ `og.css`). Yeniden üretmek: `sh tools/og/render.sh <yeni-ek>`;
-dosya adı her seferinde değişmeli (önizleme önbellekleri ada bakar), sonra index.html etiketleri ve
-tools/build-en.mjs desenini güncelle. Apple logosu kullanılmaz (yalnız resmi rozette serbest).
+dosya adı her seferinde değişmeli (önizleme önbellekleri ada bakar), sonra index.html'deki etiketleri
+güncelle; tools/build-en.mjs eki kendisi yakalar. Apple logosu kullanılmaz (yalnız resmi rozette serbest).

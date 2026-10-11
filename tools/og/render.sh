@@ -1,7 +1,7 @@
 #!/bin/sh
 # Renders the link-preview images: sh tools/og/render.sh <suffix>   e.g. "c" -> og-tr-1200x630-c.jpg
 # Use a new suffix every time (link-preview caches key on the file name), then update index.html
-# (og:image, og:image:secure_url, twitter:image) and the pattern in tools/build-en.mjs.
+# (og:image, og:image:secure_url, twitter:image); tools/build-en.mjs picks up any suffix by itself.
 set -e
 cd "$(dirname "$0")"
 for l in tr en; do
