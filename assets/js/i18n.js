@@ -183,6 +183,8 @@
     lang: function () { return current; },
     set: function (lang) {
       if (pinned && lang !== pinned) { location.href = lang === 'tr' ? '/?lang=tr' : '/en/'; return; }
+      // English always lives at /en/ so the address people copy has an English link preview.
+      if (!pinned && lang === 'en') { location.href = '/en/' + location.hash; return; }
       apply(lang);
       var url = new URL(location.href);
       url.searchParams.set('lang', lang);
@@ -192,6 +194,9 @@
 
   capture();
   var start = initial();
+  // ?lang=en or an English browser on the Turkish page: go to /en/ (bots don't run JS, so only
+  // /en/ can show an English preview; the address bar then holds the shareable English URL).
+  if (!pinned && start === 'en') { location.replace('/en/' + location.hash); return; }
   if (start !== 'tr') apply(start);
 
   document.querySelectorAll('.lang button').forEach(function (b) {
