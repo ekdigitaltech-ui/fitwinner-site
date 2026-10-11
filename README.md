@@ -22,3 +22,8 @@ ve `assets/img/og-en-1200x630.jpg` paylaşım görselini kullanır. İngilizce p
 "Kabul et" sonrası yüklenir (KVKK/GDPR açık rıza). Tercih `localStorage['fw-consent']`; alt bilgideki
 "Çerez tercihleri" şeridi yeniden açar. Olaylar: `app_store_interest`, `instagram_click`, `language_switch`
 (GA4 event + Meta trackCustom). Pixel'in `<noscript>` görseli bilerek yok (rızasız istek atar).
+
+## Paylaşım görselleri
+Kaynak `tools/og/og-tr.html`, `og-en.html` (+ `og.css`). Yeniden üretmek: `sh tools/og/render.sh <yeni-ek>`;
+dosya adı her seferinde değişmeli (önizleme önbellekleri ada bakar), sonra index.html etiketleri ve
+tools/build-en.mjs desenini güncelle. Apple logosu kullanılmaz (yalnız resmi rozette serbest).

@@ -277,6 +277,16 @@
       });
       enterScreen(i);
     }
+    // The step texts are stacked on top of each other, so the box must be as tall as the
+    // longest one (it depends on language and width) — a fixed height let long copy spill out.
+    var stepsBox = document.querySelector('.sc-steps');
+    function sizeSteps() {
+      stepsBox.style.height = '0px'; // collapse first so a smaller layout can shrink the box again
+      stepsBox.style.height = Math.max.apply(null, steps.map(function (st) { return st.scrollHeight; })) + 'px';
+    }
+    sizeSteps();
+    ST.addEventListener('refreshInit', sizeSteps);
+    document.addEventListener('fw:lang', function () { sizeSteps(); ST.refresh(); });
     show(0, true);
     var sct = ST.create({
       trigger: showcase, start: 'top top', end: 'bottom bottom',
