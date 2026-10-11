@@ -18,7 +18,7 @@ App Store'a çıkınca: "Yakında App Store'da" yerlerini Apple'ın resmi rozeti
 ve `assets/img/og-en-1200x630.jpg` paylaşım görselini kullanır. İngilizce paylaşımlarda https://fitwinner.app/en/ linkini kullan.
 
 ## Ölçüm (GA4 + Meta Pixel)
-`assets/js/consent.js`: GA4 `G-VB3XJQ3CNX` ve Meta Pixel `2312794102811584` YALNIZ çerez şeridinde
+`assets/js/consent.js`: GA4 `G-VB3XJQ3CNX` ve Meta Pixel `1092363166845634` YALNIZ çerez şeridinde
 "Kabul et" sonrası yüklenir (KVKK/GDPR açık rıza). Tercih `localStorage['fw-consent']`; alt bilgideki
 "Çerez tercihleri" şeridi yeniden açar. Olaylar: `app_store_interest`, `instagram_click`, `language_switch`
 (GA4 event + Meta trackCustom). Pixel'in `<noscript>` görseli bilerek yok (rızasız istek atar).

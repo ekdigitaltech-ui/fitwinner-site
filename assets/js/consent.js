@@ -3,7 +3,7 @@
    The choice is kept in localStorage (strictly necessary) and can be changed from the footer. */
 (function () {
   var GA_ID = 'G-VB3XJQ3CNX';
-  var PIXEL_ID = '2312794102811584';
+  var PIXEL_ID = '1092363166845634';
   var KEY = 'fw-consent'; // 'granted' | 'denied'
 
   function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
