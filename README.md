@@ -27,3 +27,11 @@ ve `assets/img/og-en-1200x630.jpg` paylaşım görselini kullanır. İngilizce p
 Kaynak `tools/og/og-tr.html`, `og-en.html` (+ `og.css`). Yeniden üretmek: `sh tools/og/render.sh <yeni-ek>`;
 dosya adı her seferinde değişmeli (önizleme önbellekleri ada bakar), sonra index.html'deki etiketleri
 güncelle; tools/build-en.mjs eki kendisi yakalar. Apple logosu kullanılmaz (yalnız resmi rozette serbest).
+
+## SEO / AI görünürlük dosyaları
+
+- `robots.txt` (tüm botlara açık + Sitemap satırı), `sitemap.xml` (TR + /en/, hreflang), `llms.txt` (olgu özeti, EN+TR), `404.html` (noindex).
+- schema.org JSON-LD (`<script id="ld">`: Organization, WebSite, MobileApplication, WebPage, FAQPage) `node tools/build-en.mjs` tarafından **iki sayfaya da** sayfadaki görünür SSS ve meta metinlerinden yazılır — elle düzenleme.
+- İçerik değişince: `sitemap.xml` içindeki `lastmod` tarihini güncelle; uygulama özellikleri/fiyat/yayın durumu değişince `llms.txt`'i güncelle (yalnız doğru bilgi).
+- App Store'a çıkınca: JSON-LD'ye App Store bağlantısı (`sameAs`/`installUrl`), `<meta name="apple-itunes-app" content="app-id=…">`, llms.txt'te durum.
+- DNS Cloudflare'de (proxied). Cloudflare "Managed robots.txt" açıksa bu dosyanın başına içerik sinyali yorumları ekler.

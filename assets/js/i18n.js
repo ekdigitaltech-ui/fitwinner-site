@@ -2,8 +2,8 @@
    Language: ?lang=en|tr in the URL, otherwise the browser language. Nothing is stored. */
 (function () {
   var EN = {
-    'meta.title': 'FitWinner — Calories, training and recovery',
-    'meta.desc': 'FitWinner calculates your daily calorie target, training plan and form score right on your phone, from your own data. If you\'d like, the AI interprets the results. For iPhone and Apple Watch. Coming soon to the App Store.',
+    'meta.title': 'FitWinner: Calorie tracking, training and recovery',
+    'meta.desc': 'FitWinner works out your daily calorie target, training plan and form score on your phone, from your own data. For iPhone and Apple Watch. Coming soon.',
     skip: 'Skip to content',
     'nav.how': 'How it works', 'nav.privacy': 'Privacy', 'nav.faq': 'FAQ',
     soon: 'Coming soon to the App Store',

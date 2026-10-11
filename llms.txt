@@ -1,0 +1,37 @@
+# FitWinner
+
+> FitWinner is an iPhone and Apple Watch app that connects calorie tracking to your training. Your daily calorie target, macros and a daily form score (recovery) are calculated on your phone with fixed formulas from your own data; optional AI turns those numbers into plain-language comments. Made by EK Digital Technologies OÜ. Status: closed beta, coming soon to the App Store.
+
+Türkçe: FitWinner, kalori takibini antrenmanınla birleştiren bir iPhone ve Apple Watch uygulamasıdır. Günlük kalori hedefin, makroların ve form skorun telefonunda, senin verilerinle hesaplanır; dilersen yapay zekâ sonuçları sade bir dille yorumlar.
+
+## What it does
+- Daily calorie target that follows training: planned and completed workouts change that day's target
+- Macro targets (protein, carbohydrate, fat) that follow the calorie target
+- Daily form score from sleep, fatigue, muscle soreness, stress and training load; Apple Watch / Apple Health data (resting heart rate, HRV, sleep) is included when connected
+- Weekly training plan with recovery days and load reduction before a match or race
+- Meal timing around training (before, during, after a session) and food suggestions from remaining calories
+- Food logging with a food database that includes Turkish dishes; recipes built from ingredients
+- Fluid tracking, supplement information with evidence levels, workout reminders with "Done" / "Snooze"
+
+## Key facts
+- Platforms: iPhone; Apple Watch optional (not required)
+- No account needed; calculations run on the phone and work offline
+- AI is optional and only runs with the user's permission; no name, email or account details are sent
+- AI does not do the calculations; it only interprets them
+- Pricing: free version; detailed AI comments, plan explanations and AI food estimates are part of FitWinner Premium (monthly subscription)
+- Health screening and safety warnings are free in every version
+- For users 18 and over. Not a medical device; it does not diagnose or recommend treatment
+- App languages (11): Turkish, English, French, Dutch, Spanish, Italian, Portuguese, Polish, Greek, Czech, Estonian
+- Availability: closed beta; App Store release will be announced on fitwinner.app
+
+## Links
+- Website (Turkish): https://fitwinner.app/
+- Website (English): https://fitwinner.app/en/
+- Instagram: https://www.instagram.com/fitwinner.app/
+- Privacy Policy: https://ekdigitaltech-ui.github.io/fitwinner-legal/privacy/
+- Terms of Use: https://ekdigitaltech-ui.github.io/fitwinner-legal/terms/
+- KVKK notice (Turkish): https://ekdigitaltech-ui.github.io/fitwinner-legal/kvkk/
+
+## Contact
+- Developer: EK Digital Technologies OÜ
+- Email: enis@ekdigital.tech
