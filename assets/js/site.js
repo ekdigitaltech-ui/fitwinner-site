@@ -201,7 +201,12 @@
     function layoutHold() {
       // Stick so the bottom of the cards (where the lock screen is) stays on screen, even when
       // the cards are taller than the viewport (then the top offset goes negative).
-      stickTop = Math.min(90, window.innerHeight - sxGrid.offsetHeight - 16);
+      // Align the lock screen's bottom with the viewport bottom, but never let its top slide
+      // under the fixed nav (small phones: the card stack is much taller than the screen).
+      var lockTop = lock.getBoundingClientRect().top - sxGrid.getBoundingClientRect().top;
+      var lockBottom = lockTop + lock.offsetHeight;
+      stickTop = Math.min(90, window.innerHeight - sxGrid.offsetHeight - 16, window.innerHeight - lockBottom - 16);
+      stickTop = Math.max(stickTop, 72 - lockTop);
       sxGrid.style.top = stickTop + 'px';
       spacer.style.height = Math.round(window.innerHeight * 0.32 * notifs.length) + 'px';
     }

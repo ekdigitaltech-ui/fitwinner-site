@@ -109,7 +109,7 @@ p { margin: 0; }
   background-size: 64px 64px; mask-image: radial-gradient(ellipse 70% 60% at 60% 40%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 60% 40%, #000 20%, transparent 75%); opacity: .5; }
 
 .hero-inner { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
-.hero-title { font-size: clamp(40px, 5.4vw, 84px); font-weight: 800; letter-spacing: -.045em; line-height: .98; margin-bottom: 26px; }
+.hero-title { font-size: clamp(40px, 4.8vw, 76px); font-weight: 800; letter-spacing: -.045em; line-height: .98; margin-bottom: 26px; }
 .hero-title .line { display: block; }
 @media (min-width: 981px) { .hero-title .line { white-space: nowrap; } }
 .lede { font-size: clamp(18px, 1.6vw, 21px); color: var(--muted); max-width: 34ch; margin-bottom: 34px; }
@@ -162,9 +162,11 @@ p { margin: 0; }
 .fc-v { font: 700 22px/1.1 var(--font-num); }
 .fc-v.small { font-size: 16px; }
 .fc-spark { width: 110px; height: 30px; }
-.fc-1 { left: 2%; top: 22%; }
-.fc-2 { right: 0; top: 12%; }
-.fc-3 { right: 4%; bottom: 16%; }
+/* Positioned from the phone (300×650, centred in the stage), never from the stage size,
+   so they sit on its edges over parts of the mock screen that carry no data. */
+.fc-2 { left: calc(50% + 30px); top: calc(50% - 325px - 34px); }
+.fc-1 { left: calc(50% - 150px - 78px); top: calc(50% - 325px + 494px); }
+.fc-3 { left: calc(50% + 24px); top: calc(50% - 325px + 574px); }
 
 .scroll-cue { position: absolute; left: 50%; bottom: 26px; width: 26px; height: 42px; margin-left: -13px; border: 1.5px solid rgba(255, 255, 255, .25); border-radius: 14px; }
 .scroll-cue span { position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: #fff; animation: cue 1.8s ease-in-out infinite; }
@@ -503,7 +505,7 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
   .nav-links { display: none; }
   .hero { padding-top: 110px; }
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-stage { height: 620px; }
+  .hero-stage { height: 620px; margin-top: 56px; } /* room for the HRV card above the phone */
   .ring-deco { width: 440px; height: 440px; margin: -220px 0 0 -220px; }
   .pv-grid { grid-template-columns: 1fr; }
   .setup .wrap { grid-template-columns: 1fr; gap: 0; }
@@ -531,9 +533,9 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border: 0; bord
   .fc-v { font-size: 16px; }
   .fc-v.small { font-size: 13px; }
   .fc-spark { width: 78px; height: 22px; }
-  .fc-2 { right: 3%; top: 1%; }
-  .fc-1 { left: 3%; top: 73%; }
-  .fc-3 { right: 3%; top: 82%; bottom: auto; }
+  .fc-2 { left: auto; right: 3%; top: 1%; }
+  .fc-1 { left: 3%; top: 75%; }
+  .fc-3 { left: auto; right: 3%; top: 85%; bottom: auto; }
   .ring-deco { width: 340px; height: 340px; margin: -170px 0 0 -170px; }
   .step { padding: 22px; }
   .sx-card { padding: 22px; }
