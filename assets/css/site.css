@@ -1,5 +1,6 @@
 /* FitWinner — fitwinner.app
-   Dark-first, like the app. Brand gradient comes from the app icon (#2abda3 → #0e8eef).
+   Dark-first, like the app. Brand gradient = app's Brand.teal → Brand.blue (#2bbda5 → #0f8ef0).
+   iOS mixes gradients in OKLab (midpoint #10a8cd); `in oklab` below gives the same in-between tones.
    Domain colours mirror Theme.Accent in the app (iOS system palette, dark variants). */
 
 :root {
@@ -13,8 +14,8 @@
   --faint: #5d6670;
   --line: rgba(255, 255, 255, .08);
 
-  --brand-1: #2abda3;
-  --brand-2: #0e8eef;
+  --brand-1: #2bbda5;
+  --brand-2: #0f8ef0;
   --brand: linear-gradient(120deg, var(--brand-1), var(--brand-2));
   --logo-yellow: #fdbd5a;
 
@@ -32,6 +33,10 @@
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-num: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   color-scheme: dark;
+}
+/* Browsers without interpolation spaces would drop the whole gradient, so keep the sRGB one above. */
+@supports (background: linear-gradient(in oklab, red, blue)) {
+  :root { --brand: linear-gradient(in oklab 120deg, var(--brand-1), var(--brand-2)); }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
