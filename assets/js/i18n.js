@@ -102,7 +102,7 @@
     'mo.s.p': 'It never makes a diagnosis. Your answers are only used to make your goals safer; for example, no calorie deficit is applied during pregnancy. When appropriate, it refers you to a specialist.',
     'pv.eyebrow': 'Your privacy comes first',
     'pv.title': 'All calculations happen on your phone, so no internet connection is needed and your raw health data never leaves your phone.',
-    'pv.a.t': 'No account required', 'pv.a.p': 'You don\'t need to create an account or share your email address to use the app. The information you enter and your logs are stored on your phone; only with your permission is a short, anonymous summary sent for AI comments.',
+    'pv.a.t': 'No account required', 'pv.a.p': 'You don\'t need to create an account or share your email address to use the app. The information you enter and your logs are stored on your phone; only with your permission is a short summary, with your name, email and identifiers removed, sent for AI comments.',
     'pv.b.t': 'Consistent, transparent calculations', 'pv.b.p': 'Your calorie target, macros and form score are determined by the calculation engines on your phone. Because these calculations follow the same rules every time, entering the same information always gives the same result, and you can see how that result was reached.',
     'pv.c.t': 'AI only with your permission', 'pv.c.p': 'Comments are prepared only with your permission, from a summary with your name and identifying details removed. You can withdraw permission at any time, and comments made from that data are deleted too.',
     'faq.eyebrow': 'Frequently asked questions', 'faq.title': 'Questions you may have.',
@@ -113,16 +113,16 @@
     q5: 'Which languages are available?', a5: 'The app is available in 11 languages: Turkish, English, French, Dutch, Spanish, Italian, Portuguese, Polish, Greek, Czech and Estonian. This site is currently available in Turkish and English.',
     'ai.l4': 'When the available information isn\'t enough to reach a conclusion, it says so clearly, and the app also shows you that the comment is uncertain.',
     'ai.l5': 'It doesn\'t invent sources or name specific studies, and it never presents information as more certain than the scientific evidence allows.',
-    'ai.l6': 'Your name, email address and any other information that could identify you are never shared with the AI. It works only with your permission, from a short, anonymous summary containing what it needs for the comment.',
+    'ai.l6': 'Your name, email address and identifiers are never shared with the AI, and names and contact details in your note are masked on your phone. It works only with your permission, from a short summary containing what it needs for the comment.',
     'q6': 'What information is shared with the AI?',
-    'a6': 'Your name, email address and account details are never shared, and the app doesn\'t use accounts at all. With your permission, a short, anonymous summary is sent, such as workout type and duration and your recent form scores. If you withdraw permission, comments made from that data are deleted too.',
+    'a6': 'Your name, email address and account details are never shared, and the app doesn\'t use accounts at all. With your permission, a short summary is sent, such as workout type and duration and your recent form scores. If you withdraw permission, comments made from that data are deleted too.',
     'q7': 'Are the AI features paid?',
     'a7': 'Comments prepared on your phone are free. Detailed AI comments, plan explanations and food estimates are part of Premium, and all of them are optional.',
     'ck.title': 'Your cookie choice', 'ck.text': 'We use Google Analytics and Meta Pixel cookies to understand how the site is used and to measure our ads, only if you allow it.',
     'ck.more': 'Privacy Policy', 'ck.reject': 'Decline', 'ck.accept': 'Accept', 'ft.cookies': 'Cookie preferences',
     'mo.k2': 'General health supplements', 'mo.k3': 'Popular but unnecessary ones',
     'cl.title': 'Set your goals based on your own data rather than guesses.',
-    'ft.legal': 'Legal', 'ft.privacy': 'Privacy Policy', 'ft.terms': 'Terms of Use', 'ft.kvkk': 'KVKK Notice', 'ft.contact': 'Contact',
+    'ft.legal': 'Legal', 'ft.privacy': 'Privacy Policy', 'ft.terms': 'Terms of Use', 'ft.kvkk': 'KVKK Notice', 'ft.healthData': 'Consumer Health Data Privacy Policy', 'ft.contact': 'Contact',
     'ft.tm': 'Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. Analytics and advertising cookies are used only with your permission. FitWinner is for general information and does not replace medical advice.'
   };
 

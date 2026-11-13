@@ -19,7 +19,7 @@ function ld(lang, pageUrl, title, desc, faq) {
   const data = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Organization', '@id': site + '#org', name: 'EK Digital Technologies OÜ', email: 'enis@ekdigital.tech' },
+      { '@type': 'Organization', '@id': site + '#org', name: 'EK Digital Technologies OÜ', email: 'info@ekdigital.tech' },
       { '@type': 'WebSite', '@id': site + '#website', url: site, name: 'FitWinner', inLanguage: ['tr', 'en'], publisher: { '@id': site + '#org' } },
       { '@type': 'MobileApplication', '@id': site + '#app', name: 'FitWinner', url: pageUrl, description: desc,
         operatingSystem: 'iOS', applicationCategory: 'HealthApplication', availableOnDevice: ['iPhone', 'Apple Watch'],

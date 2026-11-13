@@ -34,4 +34,4 @@ Türkçe: FitWinner, kalori takibini antrenmanınla birleştiren bir iPhone ve A
 
 ## Contact
 - Developer: EK Digital Technologies OÜ
-- Email: enis@ekdigital.tech
+- Email: info@ekdigital.tech
