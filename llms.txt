@@ -16,12 +16,12 @@ Türkçe: FitWinner, kalori takibini antrenmanınla birleştiren bir iPhone ve A
 ## Key facts
 - Platforms: iPhone; Apple Watch optional (not required)
 - No account needed; calculations run on the phone and work offline
-- AI is optional and only runs with the user's permission; no name, email or account details are sent
+- AI is optional and only runs with the user's permission; no name, email, account details, health-screening answers or check-in notes are sent
 - AI does not do the calculations; it only interprets them
 - Pricing: free version; detailed AI comments, plan explanations and AI food estimates are part of FitWinner Premium (monthly subscription)
 - Health screening and safety warnings are free in every version
 - For users 18 and over. Not a medical device; it does not diagnose or recommend treatment
-- App languages (11): Turkish, English, French, Dutch, Spanish, Italian, Portuguese, Polish, Greek, Czech, Estonian
+- App languages (12): Turkish, English, German, French, Dutch, Spanish, Italian, Portuguese, Polish, Greek, Czech, Estonian
 - Availability: closed beta; App Store release will be announced on fitwinner.app
 
 ## Links
