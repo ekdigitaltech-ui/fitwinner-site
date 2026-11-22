@@ -1,3 +1,19 @@
+/* Site izleyicileri (Google Analytics, Meta Pixel) 22 Kasım 2026'da kaldırıldı: bu site çerez
+   koymaz ve üçüncü taraf betiği yüklemez. Aşağıdaki blok, eski sürümün daha önce izin vermiş
+   ziyaretçide bıraktığı kayıtları siler (tercih kaydı ve izleyici çerezleri). */
+(function () {
+  try { localStorage.removeItem('fw-consent'); } catch (e) {}
+  try {
+    document.cookie.split(';').forEach(function (pair) {
+      var name = pair.split('=')[0].trim();
+      if (!/^(_ga|_gid|_gat|_gcl|_fbp|_fbc)/.test(name)) return;
+      ['', '; domain=' + location.hostname, '; domain=.' + location.hostname.replace(/^www\./, '')].forEach(function (domain) {
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + domain;
+      });
+    });
+  } catch (e) {}
+})();
+
 /* Motion layer. The page is complete without it: the CSS default is the final state,
    and this script only animates toward it. Skipped if GSAP failed to load. */
 (function () {

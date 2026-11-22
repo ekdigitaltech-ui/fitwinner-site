@@ -17,11 +17,11 @@ App Store'a çıkınca: "Yakında App Store'da" yerlerini Apple'ın resmi rozeti
 `node tools/build-en.mjs`. Sayfa İngilizce metni HTML'de taşır (önizleme botları JS çalıştırmaz)
 ve `assets/img/og-en-1200x630.jpg` paylaşım görselini kullanır. İngilizce paylaşımlarda https://fitwinner.app/en/ linkini kullan.
 
-## Ölçüm (GA4 + Meta Pixel)
-`assets/js/consent.js`: GA4 `G-VB3XJQ3CNX` ve Meta Pixel `1092363166845634` YALNIZ çerez şeridinde
-"Kabul et" sonrası yüklenir (KVKK/GDPR açık rıza). Tercih `localStorage['fw-consent']`; alt bilgideki
-"Çerez tercihleri" şeridi yeniden açar. Olaylar: `app_store_interest`, `instagram_click`, `language_switch`
-(GA4 event + Meta trackCustom). Pixel'in `<noscript>` görseli bilerek yok (rızasız istek atar).
+## Ölçüm
+Yok. Google Analytics ve Meta Pixel 22 Kasım 2026'da kaldırıldı (veri sorumlusu kararı); site çerez koymaz,
+üçüncü taraf betiği yüklemez, çerez şeridi yoktur. `assets/js/site.js` başındaki blok, eski sürümün izin vermiş
+ziyaretçide bıraktığı tercih kaydını ve izleyici çerezlerini siler. Yeniden ölçüm eklenmeden önce yasal metinler
+ve işleme kaydı güncellenir.
 
 ## Paylaşım görselleri
 Kaynak `tools/og/og-tr.html`, `og-en.html` (+ `og.css`). Yeniden üretmek: `sh tools/og/render.sh <yeni-ek>`;

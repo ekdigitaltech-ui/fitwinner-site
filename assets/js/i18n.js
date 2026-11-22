@@ -118,12 +118,10 @@
     'a6': 'Your name, email address and account details are never shared, and the app doesn\'t use accounts at all. Your health screening and check-in note are not sent either. With your permission, your form scores, your training and calendar summary and the food text you type are sent for the comment; in Türkiye only a coarse summary. If you withdraw permission, the AI comments on your phone are deleted too.',
     'q7': 'Are the AI features paid?',
     'a7': 'Comments prepared on your phone are free. Detailed AI comments, plan explanations and food estimates are part of Premium, and all of them are optional.',
-    'ck.title': 'Your cookie choice', 'ck.text': 'We use Google Analytics and Meta Pixel cookies to understand how the site is used and to measure our ads, only if you allow it.',
-    'ck.more': 'Privacy Policy', 'ck.reject': 'Decline', 'ck.accept': 'Accept', 'ft.cookies': 'Cookie preferences',
     'mo.k2': 'General health supplements', 'mo.k3': 'Popular but unnecessary ones',
     'cl.title': 'Set your goals based on your own data rather than guesses.',
     'ft.legal': 'Legal', 'ft.privacy': 'Privacy Policy', 'ft.terms': 'Terms of Use', 'ft.kvkk': 'KVKK Notice', 'ft.healthData': 'Consumer Health Data Privacy Policy', 'ft.contact': 'Contact',
-    'ft.tm': 'Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. Analytics and advertising cookies are used only with your permission. FitWinner is for general information and does not replace medical advice.'
+    'ft.tm': 'Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. FitWinner is for general information and does not replace medical advice.'
   };
 
   var TR = {}; // captured from the DOM on first run
