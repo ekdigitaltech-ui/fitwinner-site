@@ -14,4 +14,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://fitwinner.app/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fitwinner.app/"/>
   </url>
+  <url>
+    <loc>https://fitwinner.app/handbook/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://fitwinner.app/handbook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fitwinner.app/en/handbook/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fitwinner.app/handbook/"/>
+  </url>
+  <url>
+    <loc>https://fitwinner.app/en/handbook/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://fitwinner.app/handbook/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fitwinner.app/en/handbook/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fitwinner.app/handbook/"/>
+  </url>
 </urlset>
